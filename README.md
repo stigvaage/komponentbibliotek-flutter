@@ -12,16 +12,16 @@ Flutter-implementasjon av [Designsystemet](https://designsystemet.no) -- det nor
 
 ## Kort beskrivelse
 
-`komponentbibliotek_flutter` er et komplett komponentbibliotek for Flutter som implementerer Designsystemet fra designsystemet.no. Biblioteket gir norske offentlige virksomheter og andre organisasjoner et ferdig sett med tilgjengelige, tokendrevne UI-komponenter som folger det offisielle designsystemet -- uten avhengigheter til Material eller Cupertino.
+`komponentbibliotek_flutter` er et komplett komponentbibliotek for Flutter som implementerer Designsystemet fra designsystemet.no. Biblioteket gir norske offentlige virksomheter og andre organisasjoner et ferdig sett med tilgjengelige, tokendrevne UI-komponenter som følger det offisielle designsystemet -- uten avhengigheter til Material eller Cupertino.
 
 ## Funksjoner
 
 - **40 ferdige komponenter** -- knapper, skjemaelementer, navigasjon, typografi og mer
 - **Tokendrevet temaarkitektur** -- alle visuelle egenskaper styres gjennom designtokens
-- **Innebygd Digdir-tema** -- standard lyst og morkt tema fra Designsystemet, klart til bruk
+- **Innebygd Digdir-tema** -- standard lyst og mørkt tema fra Designsystemet, klart til bruk
 - **Egendefinerte temaer** -- importer egne temaer fra Designsystemet CLI via kodegenerator
 - **Fargeoverstyring** -- `DsColorScope` for lokal fargeoverstyring i undertreet
-- **Storrelsesstyring** -- `DsSizeScope` for lokal storrelsesendring (sm/md/lg)
+- **Størrelsesstyring** -- `DsSizeScope` for lokal størrelsesendring (sm/md/lg)
 - **WCAG 2.1 AA** -- alle komponenter oppfyller krav til universell utforming
 - **Alle plattformer** -- Android, iOS, Web, macOS, Linux, Windows
 - **Ingen Material/Cupertino-avhengigheter** -- rendret direkte med Flutter widgets
@@ -37,7 +37,7 @@ dependencies:
   komponentbibliotek_flutter: ^1.0.0
 ```
 
-Kjor deretter:
+Kjør deretter:
 
 ```bash
 flutter pub get
@@ -82,7 +82,7 @@ class MinApp extends StatelessWidget {
 
 ## Temabytte
 
-Bytt mellom lyst og morkt modus ved a endre `brightness`-parameteren:
+Bytt mellom lyst og mørkt modus ved å endre `brightness`-parameteren:
 
 ```dart
 // Lyst modus (standard)
@@ -91,7 +91,7 @@ DsTheme(
   child: const MinApp(),
 )
 
-// Morkt modus
+// Mørkt modus
 DsTheme(
   data: DsThemeData.digdir(brightness: Brightness.dark),
   child: const MinApp(),
@@ -116,7 +116,7 @@ MaterialApp(
 
 ## Fargestyring
 
-Bruk `DsColorScope` for a overstyre fargeskalaen i et undertree:
+Bruk `DsColorScope` for å overstyre fargeskalaen i et undertree:
 
 ```dart
 // Alle komponenter i dette undertreet bruker danger-fargeskalaen
@@ -138,12 +138,12 @@ DsColorScope(
 )
 ```
 
-## Storrelseoverstyring
+## Størrelsesoverstyring
 
-Bruk `DsSizeScope` for a overstyre storrelsen i et undertree:
+Bruk `DsSizeScope` for å overstyre størrelsen i et undertree:
 
 ```dart
-// Alle komponenter i dette undertreet bruker stor storrelse
+// Alle komponenter i dette undertreet bruker stor størrelse
 DsSizeScope(
   size: DsSize.lg,
   child: Column(
@@ -160,7 +160,7 @@ DsSizeScope(
 
 ## Komponenter
 
-Biblioteket inneholder 40 komponenter fordelt pa fire kategorier:
+Biblioteket inneholder 40 komponenter fordelt på fire kategorier:
 
 ### Kjernekomponenter (14)
 
@@ -168,10 +168,10 @@ Biblioteket inneholder 40 komponenter fordelt pa fire kategorier:
 |-----------|-------------|
 | `DsButton` | Knapp med varianter: primary, secondary, tertiary |
 | `DsTextfield` | Tekstfelt for enlinjes inndata |
-| `DsTextarea` | Tekstomrade for flerlinjes inndata |
-| `DsCheckbox` | Avkrysningsboks med stotte for ubestemt tilstand |
+| `DsTextarea` | Tekstområde for flerlinjes inndata |
+| `DsCheckbox` | Avkrysningsboks med støtte for ubestemt tilstand |
 | `DsRadio` | Radioknapp for enkeltvalg i gruppe |
-| `DsSwitch` | Av/pa-bryter |
+| `DsSwitch` | Av/på-bryter |
 | `DsAlert` | Varselboks med alvorlighetsgrader: info, warning, success, danger |
 | `DsCard` | Kort med valgfri header, innholdsblokk og bunntekst |
 | `DsTag` | Etikett for kategorisering |
@@ -185,22 +185,22 @@ Biblioteket inneholder 40 komponenter fordelt pa fire kategorier:
 
 | Komponent | Beskrivelse |
 |-----------|-------------|
-| `DsTabs` | Fanenavigasjon med tastaturstotte |
+| `DsTabs` | Fanenavigasjon med tastaturstøtte |
 | `DsDialog` | Dialogvindu (modal) |
 | `DsDropdown` | Nedtrekksmeny |
 | `DsSelect` | Velger med nedtrekksliste |
 | `DsPagination` | Sidenavigasjon |
 | `DsTable` | Datatabell |
-| `DsBreadcrumbs` | Brodsmulessti |
-| `DsSearch` | Sokefelt |
-| `DsTooltip` | Verktoyshjelp |
+| `DsBreadcrumbs` | Brødsmulessti |
+| `DsSearch` | Søkefelt |
+| `DsTooltip` | Verktøyshjelp |
 | `DsPopover` | Innholdsboble |
 | `DsAvatar` | Avatarbilde |
 | `DsAvatarStack` | Stablet gruppe av avatarer |
 | `DsToggleGroup` | Vekslegruppe |
 | `DsSuggestion` | Forslagskomponent |
 
-### Skjema og verktoy (8)
+### Skjema og verktøy (8)
 
 | Komponent | Beskrivelse |
 |-----------|-------------|
@@ -217,8 +217,8 @@ Biblioteket inneholder 40 komponenter fordelt pa fire kategorier:
 
 | Komponent | Beskrivelse |
 |-----------|-------------|
-| `DsHeading` | Overskrift med 7 nivaer (2xs--2xl) |
-| `DsParagraph` | Brodtekst med varianter: standard, short, long |
+| `DsHeading` | Overskrift med 7 nivåer (2xs--2xl) |
+| `DsParagraph` | Brødtekst med varianter: standard, short, long |
 | `DsLabel` | Etikett for skjemaelementer |
 | `DsValidationMessage` | Valideringsmelding for feilvisning |
 
@@ -257,13 +257,13 @@ Alle komponenter i biblioteket er bygget med universell utforming som grunnprins
 
 - **WCAG 2.1 AA** -- alle fargekombinasjoner oppfyller krav til kontrast (4.5:1 for tekst, 3:1 for grensesnittkomponenter)
 - **Semantikk** -- alle interaktive elementer har korrekte `Semantics`-widgeter
-- **Tastaturnavigasjon** -- full tastaturstotte med synlige fokusindikatorer
+- **Tastaturnavigasjon** -- full tastaturstøtte med synlige fokusindikatorer
 - **Bevegelsesreduksjon** -- respekterer `MediaQuery.disableAnimations`
-- **Roving focus** -- fanegrupper, radiogrupper og vekslegrupper bruker roving focus-monster
+- **Roving focus** -- fanegrupper, radiogrupper og vekslegrupper bruker roving focus-mønster
 
 ## MCP-server for AI-assistenter
 
-Biblioteket inkluderer en MCP-server (Model Context Protocol) som lar AI-kodeassistenter som Claude Code, Cursor og VS Code Copilot sla opp komponenter, migrere fra Material-widgets og soke i dokumentasjonen.
+Biblioteket inkluderer en MCP-server (Model Context Protocol) som lar AI-kodeassistenter som Claude Code, Cursor og VS Code Copilot slå opp komponenter, migrere fra Material-widgets og søke i dokumentasjonen.
 
 ### Installer i Claude Code
 
@@ -327,22 +327,22 @@ npm install
 npm run build
 ```
 
-### Tilgjengelige verktoy
+### Tilgjengelige verktøy
 
-| Verktoy | Beskrivelse |
+| Verktøy | Beskrivelse |
 |---------|-------------|
-| `lookup_component` | Sla opp en komponent -- returnerer egenskaper, eksempler og import |
-| `list_components` | List alle komponenter, valgfritt filtrert pa kategori |
+| `lookup_component` | Slå opp en komponent -- returnerer egenskaper, eksempler og import |
+| `list_components` | List alle komponenter, valgfritt filtrert på kategori |
 | `get_migration_mapping` | Migrer fra Material-widget til Designsystemet-ekvivalent |
-| `get_theme_setup` | Fa trinnvis veiledning for temaoppsett |
-| `list_tokens` | List designtokens etter kategori (farger, typografi, storrelser m.m.) |
-| `search_docs` | Sok pa tvers av all dokumentasjon |
+| `get_theme_setup` | Få trinnvis veiledning for temaoppsett |
+| `list_tokens` | List designtokens etter kategori (farger, typografi, størrelser m.m.) |
+| `search_docs` | Søk på tvers av all dokumentasjon |
 
-Se [mcp-server/README.md](mcp-server/README.md) for full dokumentasjon og Docker-stotte.
+Se [mcp-server/README.md](mcp-server/README.md) for full dokumentasjon og Docker-støtte.
 
 ## Bidra
 
-Vi onsker bidrag velkommen! Se [CONTRIBUTING.md](CONTRIBUTING.md) for retningslinjer.
+Vi ønsker bidrag velkommen! Se [CONTRIBUTING.md](CONTRIBUTING.md) for retningslinjer.
 
 ## Lisens
 

@@ -1,15 +1,15 @@
 # MCP-server
 
-Komponentbiblioteket inkluderer en MCP-server (Model Context Protocol) som gjor at AI-kodeassistenter kan sla opp komponenter, hente migrasjonsrad fra Material, og soke i dokumentasjonen -- direkte fra editoren din.
+Komponentbiblioteket inkluderer en MCP-server (Model Context Protocol) som gjør at AI-kodeassistenter kan slå opp komponenter, hente migrasjonsråd fra Material, og søke i dokumentasjonen -- direkte fra editoren din.
 
 ## Hva er MCP?
 
-[Model Context Protocol](https://modelcontextprotocol.io) er en apen standard som lar AI-assistenter koble seg til eksterne datkilder og verktoy. MCP-serveren i dette biblioteket gir AI-assistenten din tilgang til:
+[Model Context Protocol](https://modelcontextprotocol.io) er en åpen standard som lar AI-assistenter koble seg til eksterne datakilder og verktøy. MCP-serveren i dette biblioteket gir AI-assistenten din tilgang til:
 
 - Alle 43 komponent-APIer med egenskaper, typer og eksempler
-- Migrasjonsrad fra Material-widgets til Designsystemet-ekvivalenter
-- Komplette designtokens (farger, typografi, storrelser, skygger)
-- Dokumentasjonssok pa tvers av alle sider
+- Migrasjonsråd fra Material-widgets til Designsystemet-ekvivalenter
+- Komplette designtokens (farger, typografi, størrelser, skygger)
+- Dokumentasjonssøk på tvers av alle sider
 - Trinnvis veiledning for temaoppsett
 
 ## Forutsetninger
@@ -97,26 +97,26 @@ Legg til i `.cursor/mcp.json`:
 }
 ```
 
-## Tilgjengelige verktoy
+## Tilgjengelige verktøy
 
-Nar MCP-serveren er koblet til, far AI-assistenten din tilgang til disse verktoyene:
+Når MCP-serveren er koblet til, får AI-assistenten din tilgang til disse verktøyene:
 
 ### `lookup_component`
 
-Sla opp en komponent etter navn. Returnerer alle egenskaper med typer, standardverdier, import-setning og kodeeksempler.
+Slå opp en komponent etter navn. Returnerer alle egenskaper med typer, standardverdier, import-setning og kodeeksempler.
 
-**Eksempel:** «Sla opp DsButton» gir:
+**Eksempel:** «Slå opp DsButton» gir:
 - 10 egenskaper med typer og standardverdier
 - Import-setning
 - Kodeeksempler fra dokumentasjonen
 
 ### `list_components`
 
-List alle tilgjengelige komponenter, valgfritt filtrert pa kategori: form, navigation, layout, content, interactive eller typography.
+List alle tilgjengelige komponenter, valgfritt filtrert på kategori: form, navigation, layout, content, interactive eller typography.
 
 ### `get_migration_mapping`
 
-Fa migrasjonsrad fra en Material-widget til Designsystemet-ekvivalenten. Inkluderer:
+Få migrasjonsråd fra en Material-widget til Designsystemet-ekvivalenten. Inkluderer:
 - Egenskapsmapping (Material-egenskap → Ds-egenskap)
 - For/etter-kodeeksempler
 - Migreringsnotater
@@ -146,25 +146,25 @@ Dekker 20+ Material-widgets:
 
 ### `get_theme_setup`
 
-Fa trinnvis veiledning for a sette opp Designsystemet-temaet i Flutter-appen din, inkludert DsTheme-wrapping, lys/mork modus og farge-/storrelsesscoping.
+Få trinnvis veiledning for å sette opp Designsystemet-temaet i Flutter-appen din, inkludert DsTheme-wrapping, lys/mørk modus og farge-/størrelsesscoping.
 
 ### `list_tokens`
 
 List designtokens etter kategori:
 - **colors** -- 9 fargeskalaer med 16 trinn hver
-- **typography** -- 7 overskriftnivaer + 15 brodtekststiler
-- **sizes** -- Storrelsestokens (sm/md/lg)
+- **typography** -- 7 overskriftnivåer + 15 brødtekststiler
+- **sizes** -- Størrelsestokens (sm/md/lg)
 - **border-radius** -- Avrundingsverdier
 - **shadows** -- Skyggedefinisjoner (xs--xl)
 - **icons** -- Lucide-ikoner tilgjengelig via DsIcons
 
 ### `search_docs`
 
-Sok pa tvers av all dokumentasjon -- komponentsider, kom-i-gang-guider og god praksis. Returnerer relevante utdrag med kildeangivelse.
+Søk på tvers av all dokumentasjon -- komponentsider, kom-i-gang-guider og god praksis. Returnerer relevante utdrag med kildeangivelse.
 
 ## Tilgjengelige ressurser
 
-MCP-serveren eksponerer ogsa radata som AI-assistenten kan lese direkte:
+MCP-serveren eksponerer også rådata som AI-assistenten kan lese direkte:
 
 | Ressurs | Beskrivelse |
 |---------|-------------|
@@ -173,7 +173,7 @@ MCP-serveren eksponerer ogsa radata som AI-assistenten kan lese direkte:
 
 ## Docker
 
-For teambruk kan serveren ogsa kjores som Docker-container:
+For teambruk kan serveren også kjøres som Docker-container:
 
 ```bash
 # Fra repositoryets rotmappe
@@ -181,20 +181,20 @@ docker build -t komponentbibliotek-mcp -f mcp-server/Dockerfile .
 docker run -i komponentbibliotek-mcp
 ```
 
-## Feilsoking
+## Feilsøking
 
 ### Serveren starter ikke
 
-Sjekk at `REPO_ROOT` peker pa riktig mappe:
+Sjekk at `REPO_ROOT` peker på riktig mappe:
 
 ```bash
 REPO_ROOT=/sti/til/repo node mcp-server/dist/index.js
 ```
 
-### Verktoy returnerer tomme resultater
+### Verktøy returnerer tomme resultater
 
 Sjekk at biblioteket er bygget og at kildefilene finnes under `lib/src/components/`.
 
-### Dokumentasjonssok gir ingen treff
+### Dokumentasjonssøk gir ingen treff
 
 Sjekk at `site/nb/`-mappen finnes med Markdown-filer.

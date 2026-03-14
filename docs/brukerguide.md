@@ -2,11 +2,11 @@
 
 ## Innledning
 
-[Designsystemet](https://designsystemet.no) er det norske offentlige designsystemet, utviklet og vedlikeholdt av Digitaliseringsdirektoratet (Digdir). Det tilbyr et helhetlig sett med designtokens, komponenter og retningslinjer for a bygge tilgjengelige, konsistente digitale tjenester i offentlig sektor.
+[Designsystemet](https://designsystemet.no) er det norske offentlige designsystemet, utviklet og vedlikeholdt av Digitaliseringsdirektoratet (Digdir). Det tilbyr et helhetlig sett med designtokens, komponenter og retningslinjer for å bygge tilgjengelige, konsistente digitale tjenester i offentlig sektor.
 
-`komponentbibliotek_flutter` er en fullstendig Flutter-implementasjon av Designsystemet. Biblioteket gir deg 40 ferdige komponenter, et tokendrevet temasystem, og full stotte for egendefinerte temaer -- alt uten avhengigheter til Material eller Cupertino.
+`komponentbibliotek_flutter` er en fullstendig Flutter-implementasjon av Designsystemet. Biblioteket gir deg 40 ferdige komponenter, et tokendrevet temasystem, og full støtte for egendefinerte temaer -- alt uten avhengigheter til Material eller Cupertino.
 
-Denne brukerguiden dekker alt du trenger for a ta biblioteket i bruk, fra oppsett og temahaandtering til detaljert bruk av komponenter og tilgjengelighet.
+Denne brukerguiden dekker alt du trenger for å ta biblioteket i bruk, fra oppsett og temahåndtering til detaljert bruk av komponenter og tilgjengelighet.
 
 ---
 
@@ -16,7 +16,7 @@ Denne brukerguiden dekker alt du trenger for a ta biblioteket i bruk, fra oppset
 
 - Flutter 3.19 eller nyere
 - Dart 3.3 eller nyere
-- Alle Flutter-plattformer stottet: Android, iOS, Web, macOS, Linux, Windows
+- Alle Flutter-plattformer støttet: Android, iOS, Web, macOS, Linux, Windows
 
 ### Installer pakken
 
@@ -27,7 +27,7 @@ dependencies:
   komponentbibliotek_flutter: ^1.0.0
 ```
 
-Kjor installasjonen:
+Kjør installasjonen:
 
 ```bash
 flutter pub get
@@ -54,7 +54,7 @@ import 'package:komponentbibliotek_flutter/typography.dart';
 
 ### Pakk inn applikasjonen
 
-Pakk inn rotwidgeten din med `DsTheme` for a gjore temaet tilgjengelig for alle komponenter:
+Pakk inn rotwidgeten din med `DsTheme` for å gjøre temaet tilgjengelig for alle komponenter:
 
 ```dart
 import 'package:komponentbibliotek_flutter/komponentbibliotek_flutter.dart';
@@ -76,7 +76,7 @@ void main() {
 
 ## Temaarkitektur
 
-Bibliotekets temasystem er bygget rundt designtokens som styrer alle visuelle egenskaper. Arkitekturen bestar av flere lag som samarbeider for a gi en fleksibel og konsistent temaopplevelse.
+Bibliotekets temasystem er bygget rundt designtokens som styrer alle visuelle egenskaper. Arkitekturen består av flere lag som samarbeider for å gi en fleksibel og konsistent temaopplevelse.
 
 ### DsThemeData
 
@@ -84,11 +84,11 @@ Bibliotekets temasystem er bygget rundt designtokens som styrer alle visuelle eg
 
 | Felt | Type | Beskrivelse |
 |------|------|-------------|
-| `brightness` | `Brightness` | Lyst eller morkt modus |
+| `brightness` | `Brightness` | Lyst eller mørkt modus |
 | `colorScheme` | `DsColorScheme` | Alle fargeskalaer (9 semantiske + egendefinerte) |
-| `sizeTokens` | `DsSizeTokens` | Storrelsestokens for aktiv storrelsesmodus |
-| `typography` | `DsTypography` | Tekststilar med skriftfamilie og alle nivaer |
-| `borderRadius` | `DsBorderRadiusTokens` | Hjorneavrundingstokens |
+| `sizeTokens` | `DsSizeTokens` | Størrelsestokens for aktiv størrelsesmodus |
+| `typography` | `DsTypography` | Tekststiler med skriftfamilie og alle nivåer |
+| `borderRadius` | `DsBorderRadiusTokens` | Hjørneavrundingstokens |
 | `shadows` | `DsShadowTokens` | Skyggetokens |
 | `disabledOpacity` | `double` | Gjennomsiktighet for deaktivert tilstand (standard: 0.3) |
 
@@ -97,7 +97,7 @@ Bibliotekets temasystem er bygget rundt designtokens som styrer alle visuelle eg
 ```dart
 // Innebygd Digdir-tema
 final lystTema = DsThemeData.digdir(); // lyst modus (standard)
-final morktTema = DsThemeData.digdir(brightness: Brightness.dark);
+final mørktTema = DsThemeData.digdir(brightness: Brightness.dark);
 
 // Fra JSON-tokens (brukes av kodegeneratoren)
 final egendefinertTema = DsThemeData.fromTokens(jsonMap);
@@ -105,10 +105,10 @@ final egendefinertTema = DsThemeData.fromTokens(jsonMap);
 
 ### DsTheme (InheritedWidget)
 
-`DsTheme` er en `InheritedWidget` som gjor temaet tilgjengelig i hele widgettreet:
+`DsTheme` er en `InheritedWidget` som gjør temaet tilgjengelig i hele widgettreet:
 
 ```dart
-// Sett tema pa rotniva
+// Sett tema på rotnivå
 DsTheme(
   data: DsThemeData.digdir(),
   child: MinApp(),
@@ -124,12 +124,12 @@ final typografi = tema.typography;
 
 | Metode | Beskrivelse |
 |--------|-------------|
-| `DsTheme.of(context)` | Returnerer naermeste `DsThemeData`, eller kaster feil |
-| `DsTheme.maybeOf(context)` | Returnerer naermeste `DsThemeData`, eller `null` |
+| `DsTheme.of(context)` | Returnerer nærmeste `DsThemeData`, eller kaster feil |
+| `DsTheme.maybeOf(context)` | Returnerer nærmeste `DsThemeData`, eller `null` |
 
 ### ThemeExtension-integrasjon med MaterialApp
 
-`DsThemeData` implementerer `ThemeExtension<DsThemeData>`, noe som gjor det mulig a integrere med eksisterende `MaterialApp`-applikasjoner:
+`DsThemeData` implementerer `ThemeExtension<DsThemeData>`, noe som gjør det mulig å integrere med eksisterende `MaterialApp`-applikasjoner:
 
 ```dart
 MaterialApp(
@@ -146,7 +146,7 @@ MaterialApp(
 final dsTheme = Theme.of(context).extension<DsThemeData>()!;
 ```
 
-`DsThemeData` implementerer bade `copyWith` og `lerp` for a stotte temanimasjoner og delvis temaoverskrivning.
+`DsThemeData` implementerer både `copyWith` og `lerp` for å støtte temanimasjoner og delvis temaoverskrivning.
 
 > **Merk:** Bibliotekkomponentene bruker alltid `DsTheme.of(context)` internt. `ThemeExtension`-integrasjonen er et valgfritt tillegg for utviklere som bruker `MaterialApp`.
 
@@ -158,13 +158,13 @@ Designsystemets fargesystem er bygget rundt semantiske fargeskalaer som sikrer k
 
 ### DsColorScheme -- 9 semantiske fargeskalaer
 
-`DsColorScheme` inneholder 9 navngitte fargeskalaer pluss stotte for egendefinerte skalaer:
+`DsColorScheme` inneholder 9 navngitte fargeskalaer pluss støtte for egendefinerte skalaer:
 
 | Fargeskala | Beskrivelse |
 |------------|-------------|
-| `accent` | Primaer interaksjonsfarge (standardfarge for komponenter) |
-| `neutral` | Noytral/gra fargeskala |
-| `brand1` | Forste merkevare-farge |
+| `accent` | Primær interaksjonsfarge (standardfarge for komponenter) |
+| `neutral` | Nøytral/grå fargeskala |
+| `brand1` | Første merkevare-farge |
 | `brand2` | Andre merkevare-farge |
 | `brand3` | Tredje merkevare-farge |
 | `success` | Suksess / positivt semantisk farge |
@@ -182,7 +182,7 @@ final fareFarger = tema.colorScheme.danger;
 
 ### DsColorScale -- 16 tokens per fargeskala
 
-Hver fargeskala inneholder 16 farge-tokens fordelt pa 5 grupper:
+Hver fargeskala inneholder 16 farge-tokens fordelt på 5 grupper:
 
 #### Bakgrunn (2 tokens)
 
@@ -197,7 +197,7 @@ Hver fargeskala inneholder 16 farge-tokens fordelt pa 5 grupper:
 |-------|-------------|
 | `surfaceDefault` | Standard overflate for kort og paneler |
 | `surfaceTinted` | Tonet variant av overflaten |
-| `surfaceHover` | Overflatefarge ved pekerhover |
+| `surfaceHover` | Overflatefarge ved peker-hover |
 | `surfaceActive` | Overflatefarge ved trykk/aktiv tilstand |
 
 #### Kantlinje (3 tokens)
@@ -206,14 +206,14 @@ Hver fargeskala inneholder 16 farge-tokens fordelt pa 5 grupper:
 |-------|-------------|
 | `borderSubtle` | Lavintensitets kantlinje |
 | `borderDefault` | Standard kantlinje (minst 3:1 kontrast mot bakgrunn) |
-| `borderStrong` | Hoyintensitets kantlinje (minst 3:1 mot alle overflater) |
+| `borderStrong` | Høyintensitets kantlinje (minst 3:1 mot alle overflater) |
 
 #### Tekst (2 tokens)
 
 | Token | Beskrivelse |
 |-------|-------------|
-| `textSubtle` | Sekundaertekst (minst 4.5:1 mot bakgrunn og standard overflate) |
-| `textDefault` | Primaertekst (minst 4.5:1 mot alle bakgrunner og overflater) |
+| `textSubtle` | Sekundærtekst (minst 4.5:1 mot bakgrunn og standard overflate) |
+| `textDefault` | Primærtekst (minst 4.5:1 mot alle bakgrunner og overflater) |
 
 #### Base (5 tokens)
 
@@ -222,8 +222,8 @@ Hver fargeskala inneholder 16 farge-tokens fordelt pa 5 grupper:
 | `baseDefault` | Solid fyll for knapper, merker etc. |
 | `baseHover` | Solid fyll ved hover |
 | `baseActive` | Solid fyll ved trykk |
-| `baseContrastSubtle` | Tekst pa `baseDefault` (minst 4.5:1) |
-| `baseContrastDefault` | Tekst pa `baseDefault` OG `baseHover` (minst 4.5:1) |
+| `baseContrastSubtle` | Tekst på `baseDefault` (minst 4.5:1) |
+| `baseContrastDefault` | Tekst på `baseDefault` OG `baseHover` (minst 4.5:1) |
 
 ### DsColorScope -- lokal fargeoverstyring
 
@@ -245,7 +245,7 @@ DsColorScope(
   ),
 )
 
-// Kan ogsa settes per komponent
+// Kan også settes per komponent
 DsButton(
   color: DsColor.success,
   onPressed: () => lagre(),
@@ -253,7 +253,7 @@ DsButton(
 )
 ```
 
-Nar en komponent har bade en lokal `color`-parameter og en `DsColorScope`-ancestor, har den lokale parameteren forrang.
+Når en komponent har både en lokal `color`-parameter og en `DsColorScope`-ancestor, har den lokale parameteren forrang.
 
 ### DsColor-verdier
 
@@ -262,7 +262,7 @@ Nar en komponent har bade en lokal `color`-parameter og en `DsColorScope`-ancest
 | Verdi | Fargeskala |
 |-------|------------|
 | `DsColor.accent` | Accent (standard) |
-| `DsColor.neutral` | Noytral |
+| `DsColor.neutral` | Nøytral |
 | `DsColor.brand1` | Merkevare 1 |
 | `DsColor.brand2` | Merkevare 2 |
 | `DsColor.brand3` | Merkevare 3 |
@@ -274,13 +274,13 @@ Nar en komponent har bade en lokal `color`-parameter og en `DsColorScope`-ancest
 
 ---
 
-## Storrelsessystem
+## Størrelsessystem
 
-Designsystemet tilbyr tre storrelsesmoduser som pavirker alle komponenter.
+Designsystemet tilbyr tre størrelsesmoduser som påvirker alle komponenter.
 
 ### DsSize-verdier
 
-| Verdi | Basisskrift | Steg | Typisk komponenthoyde |
+| Verdi | Basisskrift | Steg | Typisk komponenthøyde |
 |-------|-------------|------|-----------------------|
 | `DsSize.sm` | 16px | 4px | ca. 36px |
 | `DsSize.md` | 18px | 4px | ca. 48px (standard) |
@@ -288,17 +288,17 @@ Designsystemet tilbyr tre storrelsesmoduser som pavirker alle komponenter.
 
 ### DsSizeTokens
 
-`DsSizeTokens` inneholder beregnet storrelsesdata for den aktive storelssesmodusen, inkludert 31 nummererte verdier (`size0` til `size30`) beregnet fra basisstorrelsen og stegverdien.
+`DsSizeTokens` inneholder beregnet størrelsesdata for den aktive størrelsesmodusen, inkludert 31 nummererte verdier (`size0` til `size30`) beregnet fra basisstørrelsen og stegverdien.
 
 ```dart
 final tema = DsTheme.of(context);
-final storrelse = tema.sizeTokens;
-final basisskrift = storrelse.base; // 18.0 for md
+final størrelse = tema.sizeTokens;
+final basisskrift = størrelse.base; // 18.0 for md
 ```
 
-### DsSizeScope -- lokal storrelsesoverstyring
+### DsSizeScope -- lokal størrelsesoverstyring
 
-`DsSizeScope` lar deg overstyre den aktive storrelsesmodusen for et undertree:
+`DsSizeScope` lar deg overstyre den aktive størrelsesmodusen for et undertree:
 
 ```dart
 // Stort skjema
@@ -335,21 +335,21 @@ DsSizeScope(
 )
 ```
 
-Nar en komponent har bade en lokal `size`-parameter og en `DsSizeScope`-ancestor, har den lokale parameteren forrang. Nar ingen `DsSizeScope` er satt, brukes `DsSize.md` som standard.
+Når en komponent har både en lokal `size`-parameter og en `DsSizeScope`-ancestor, har den lokale parameteren forrang. Når ingen `DsSizeScope` er satt, brukes `DsSize.md` som standard.
 
 ---
 
 ## Typografi
 
-Bibliotekets typografikomponenter folger Designsystemets typografisystem med Inter-fonten.
+Bibliotekets typografikomponenter følger Designsystemets typografisystem med Inter-fonten.
 
 ### DsHeading -- overskrifter
 
-7 overskriftnivaer med fontvekt 500 og linjehoyde 1.3:
+7 overskriftnivåer med fontvekt 500 og linjehøyde 1.3:
 
-| Niva | Enum-verdi |
+| Nivå | Enum-verdi |
 |------|-----------|
-| 2xl (storst) | `DsHeadingLevel.xxl` |
+| 2xl (størst) | `DsHeadingLevel.xxl` |
 | xl | `DsHeadingLevel.xl` |
 | lg | `DsHeadingLevel.lg` |
 | md | `DsHeadingLevel.md` |
@@ -363,19 +363,19 @@ DsHeading(text: 'Underoverskrift', level: DsHeadingLevel.md)
 DsHeading(text: 'Seksjonstittel', level: DsHeadingLevel.sm)
 ```
 
-### DsParagraph -- brodtekst
+### DsParagraph -- brødtekst
 
-5 storrelsesnivaer (xs--xl) i tre varianter med ulik linjehoyde:
+5 størrelsesnivåer (xs--xl) i tre varianter med ulik linjehøyde:
 
-| Variant | Linjehoyde | Bruksomrade |
+| Variant | Linjehøyde | Bruksområde |
 |---------|-----------|-------------|
-| `DsBodyVariant.standard` | 1.5 | Vanlig brodtekst |
+| `DsBodyVariant.standard` | 1.5 | Vanlig brødtekst |
 | `DsBodyVariant.short` | 1.3 | Kompakt tekst, tabeller |
 | `DsBodyVariant.long` | 1.7 | Lang lesbar tekst, artikler |
 
 ```dart
 DsParagraph(
-  text: 'Dette er vanlig brodtekst.',
+  text: 'Dette er vanlig brødtekst.',
   bodySize: DsBodySize.md,
   variant: DsBodyVariant.standard,
 )
@@ -407,7 +407,7 @@ DsValidationMessage(text: 'E-postadressen er ugyldig')
 
 ## Skjemakomponenter
 
-Designsystemets skjemakomponenter gir deg alt du trenger for a bygge tilgjengelige skjemaer.
+Designsystemets skjemakomponenter gir deg alt du trenger for å bygge tilgjengelige skjemaer.
 
 ### DsField og DsTextfield
 
@@ -417,7 +417,7 @@ Designsystemets skjemakomponenter gir deg alt du trenger for a bygge tilgjengeli
 DsField(
   label: 'E-postadresse',
   description: 'Vi deler ikke e-postadressen din med andre.',
-  error: epostFeil, // null nar gyldig, feilmelding nar ugyldig
+  error: epostFeil, // null når gyldig, feilmelding når ugyldig
   child: DsTextfield(
     controller: epostController,
     error: epostFeil,
@@ -443,13 +443,13 @@ DsField(
 
 ### DsCheckbox
 
-Avkrysningsboks med stotte for ubestemt tilstand:
+Avkrysningsboks med støtte for ubestemt tilstand:
 
 ```dart
 DsCheckbox(
   value: godkjent,
   onChanged: (verdi) => setState(() => godkjent = verdi),
-  label: Text('Jeg godtar vilkarene'),
+  label: Text('Jeg godtar vilkårene'),
 )
 
 // Ubestemt tilstand (delvis valgt)
@@ -486,7 +486,7 @@ Column(
 
 ### DsSwitch
 
-Av/pa-bryter:
+Av/på-bryter:
 
 ```dart
 DsSwitch(
@@ -501,21 +501,21 @@ DsSwitch(
 Knapp med tre varianter:
 
 ```dart
-// Primaerknapp (solid fyll)
+// Primærknapp (solid fyll)
 DsButton(
   variant: DsButtonVariant.primary,
   onPressed: () => send(),
   child: Text('Send inn'),
 )
 
-// Sekundaerknapp (kantlinje)
+// Sekundærknapp (kantlinje)
 DsButton(
   variant: DsButtonVariant.secondary,
   onPressed: () => avbryt(),
   child: Text('Avbryt'),
 )
 
-// Tertiaerknapp (kun tekst)
+// Tertiærknapp (kun tekst)
 DsButton(
   variant: DsButtonVariant.tertiary,
   onPressed: () => lesmer(),
@@ -550,7 +550,7 @@ DsButton(
 
 ### Validering og feiltilstander
 
-Skjemakomponenter stotter feiltilstander gjennom `error`-parameteren:
+Skjemakomponenter støtter feiltilstander gjennom `error`-parameteren:
 
 ```dart
 class MittSkjema extends StatefulWidget {
@@ -566,7 +566,7 @@ class _MittSkjemaState extends State<MittSkjema> {
 
   void _valider() {
     setState(() {
-      _navnFeil = _navnController.text.isEmpty ? 'Navn er pakrevd' : null;
+      _navnFeil = _navnController.text.isEmpty ? 'Navn er påkrevd' : null;
       _epostFeil = _epostController.text.contains('@')
           ? null
           : 'Ugyldig e-postadresse';
@@ -607,7 +607,7 @@ class _MittSkjemaState extends State<MittSkjema> {
 
 ### DsFieldset
 
-For a gruppere relaterte skjemaelementer:
+For å gruppere relaterte skjemaelementer:
 
 ```dart
 DsFieldset(
@@ -632,7 +632,7 @@ Viser en oppsummering av alle skjemafeil:
 ```dart
 DsErrorSummary(
   errors: [
-    DsErrorEntry(field: 'Navn', message: 'Navn er pakrevd'),
+    DsErrorEntry(field: 'Navn', message: 'Navn er påkrevd'),
     DsErrorEntry(field: 'E-post', message: 'Ugyldig e-postadresse'),
   ],
 )
@@ -670,7 +670,7 @@ DsCard(
   elevated: true,
   onTap: () => naviger(),
   child: DsCardBlock(
-    child: DsParagraph(text: 'Klikk pa dette kortet.'),
+    child: DsParagraph(text: 'Klikk på dette kortet.'),
   ),
 )
 ```
@@ -689,7 +689,7 @@ DsAlert(
 DsAlert(
   severity: DsSeverity.warning,
   title: Text('Advarsel'),
-  child: Text('Vaer oppmerksom pa dette.'),
+  child: Text('Vær oppmerksom på dette.'),
 )
 
 DsAlert(
@@ -740,7 +740,7 @@ DsBadge(
 
 ### DsTabs
 
-Fanenavigasjon med tastaturstotte (roving focus):
+Fanenavigasjon med tastaturstøtte (roving focus):
 
 ```dart
 DsTabs(
@@ -796,7 +796,7 @@ Dialogvindu (modal):
 ```dart
 DsDialog(
   title: Text('Bekreft sletting'),
-  child: Text('Er du sikker pa at du vil slette dette elementet?'),
+  child: Text('Er du sikker på at du vil slette dette elementet?'),
   actions: [
     DsButton(
       variant: DsButtonVariant.secondary,
@@ -843,33 +843,33 @@ DsSelect(
 
 ### DsBreadcrumbs
 
-Brodsmulessti:
+Brødsmulessti:
 
 ```dart
 DsBreadcrumbs(
   items: [
-    DsBreadcrumbItem(label: Text('Hjem'), onTap: () => gaTilHjem()),
-    DsBreadcrumbItem(label: Text('Tjenester'), onTap: () => gaTilTjenester()),
-    DsBreadcrumbItem(label: Text('Soknad')), // Gjeldende side, ingen onTap
+    DsBreadcrumbItem(label: Text('Hjem'), onTap: () => gåTilHjem()),
+    DsBreadcrumbItem(label: Text('Tjenester'), onTap: () => gåTilTjenester()),
+    DsBreadcrumbItem(label: Text('Søknad')), // Gjeldende side, ingen onTap
   ],
 )
 ```
 
 ### DsSearch
 
-Sokefelt:
+Søkefelt:
 
 ```dart
 DsSearch(
-  controller: sokeController,
-  onSubmitted: (sokeord) => sok(sokeord),
-  placeholder: 'Sok etter tjenester...',
+  controller: søkeController,
+  onSubmitted: (søkeord) => søk(søkeord),
+  placeholder: 'Søk etter tjenester...',
 )
 ```
 
 ### DsTooltip og DsPopover
 
-Verktoyshjelp og innholdsboble:
+Verktøyshjelp og innholdsboble:
 
 ```dart
 // Tooltip
@@ -931,7 +931,7 @@ DsToggleGroup(
 
 // Suggestion -- forslagskomponent
 DsSuggestion(
-  controller: sokeController,
+  controller: søkeController,
   suggestions: forslag,
   onSelected: (valgt) => brukForslag(valgt),
 )
@@ -945,7 +945,7 @@ DsDetails(
 // List -- stilisert liste
 DsList(
   items: [
-    Text('Forste element'),
+    Text('Første element'),
     Text('Andre element'),
     Text('Tredje element'),
   ],
@@ -972,7 +972,7 @@ DsDivider()
 // Link -- lenke
 DsLink(
   text: 'Les mer om Designsystemet',
-  onTap: () => apneLenke(),
+  onTap: () => åpneLenke(),
 )
 ```
 
@@ -1043,7 +1043,7 @@ void main() {
 }
 ```
 
-Den genererte temafilen inneholder bade `light()` og `dark()` fabrikkmetoder.
+Den genererte temafilen inneholder både `light()` og `dark()` fabrikkmetoder.
 
 ### Avslutningskoder
 
@@ -1058,7 +1058,7 @@ Den genererte temafilen inneholder bade `light()` og `dark()` fabrikkmetoder.
 
 ## Tilgjengelighet
 
-Alle komponenter i biblioteket er designet med universell utforming som grunnprinsipp, i trad med Designsystemets krav og norsk lovgivning.
+Alle komponenter i biblioteket er designet med universell utforming som grunnprinsipp, i tråd med Designsystemets krav og norsk lovgivning.
 
 ### Fargekontrast
 
@@ -1091,31 +1091,31 @@ Komponenter respekterer `MediaQuery.disableAnimations` og demper animasjoner for
 
 ### Beste praksis
 
-1. Bruk alltid `DsField` rundt tekstfelt for a koble etikett og feilmelding korrekt
+1. Bruk alltid `DsField` rundt tekstfelt for å koble etikett og feilmelding korrekt
 2. Gi beskrivende etiketter til alle skjemaelementer
-3. Bruk `DsErrorSummary` for a vise en oppsummering av skjemafeil
-4. Test med skjermleser pa malplattformen
+3. Bruk `DsErrorSummary` for å vise en oppsummering av skjemafeil
+4. Test med skjermleser på målplattformen
 5. Test tastaturnavigasjon gjennom hele skjemaet
-6. Bruk `DsSkipLink` for a la brukere hoppe over navigasjonen
+6. Bruk `DsSkipLink` for å la brukere hoppe over navigasjonen
 
 ---
 
-## Plattformstotte
+## Plattformstøtte
 
-Biblioteket stotter alle plattformer som Flutter stotter:
+Biblioteket støtter alle plattformer som Flutter støtter:
 
 | Plattform | Status |
 |-----------|--------|
-| Android | Full stotte |
-| iOS | Full stotte |
-| Web | Full stotte |
-| macOS | Full stotte |
-| Linux | Full stotte |
-| Windows | Full stotte |
+| Android | Full støtte |
+| iOS | Full støtte |
+| Web | Full støtte |
+| macOS | Full støtte |
+| Linux | Full støtte |
+| Windows | Full støtte |
 
 ### Plattformspesifikke hensyn
 
 - **Inter-font**: Levert som pakkeressurs (TTF-filer). Ingen nettverkstilgang kreves.
-- **Hover-effekter**: Bruker `MouseRegion` som kun aktiveres pa pekerenheter, ikke beroring.
+- **Hover-effekter**: Bruker `MouseRegion` som kun aktiveres på pekerenheter, ikke berøring.
 - **Fokusindikatorer**: Tilpasset plattformens fokuskonvensjoner.
-- **Minste Flutter-versjon**: 3.19+ (kreves for Dart 3.3-funksjoner som monstermatching og forseglede klasser).
+- **Minste Flutter-versjon**: 3.19+ (kreves for Dart 3.3-funksjoner som mønstermatching og forseglede klasser).
