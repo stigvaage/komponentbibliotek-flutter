@@ -79,6 +79,13 @@
   line-height: 1.5;
 }
 
+/* Emoji-ikon på komponentkort */
+.component-card-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+  display: block;
+}
+
 /* Tabellstyling */
 .vp-doc table {
   width: 100%;
@@ -86,4 +93,123 @@
 
 .vp-doc table th {
   font-weight: 600;
+}
+
+/* Komponent-fanenavigasjon */
+.component-tabs-nav {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--vp-c-divider);
+  margin: 24px 0 0 0;
+}
+
+.component-tab-btn {
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--vp-c-text-2);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.2s, border-color 0.2s;
+  font-family: var(--vp-font-family-base);
+}
+
+.component-tab-btn:hover {
+  color: var(--vp-c-brand-1);
+}
+
+.component-tab-btn.active {
+  color: var(--vp-c-brand-1);
+  border-bottom-color: var(--vp-c-brand-1);
+}
+
+.component-tab-panel {
+  padding-top: 8px;
+}
+
+/* Seksjonsrutenett for God praksis og Mønstre */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.section-card {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  padding: 24px;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.section-card:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.section-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--vp-c-brand-1);
+}
+
+.section-card p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--vp-c-text-2);
+  line-height: 1.6;
+}
+
+/* Tilbakemeldingslenke */
+.component-feedback {
+  margin-top: 48px;
+  padding: 20px 24px;
+  border: 1px dashed var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg-soft);
+  text-align: center;
+}
+
+.component-feedback p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--vp-c-text-2);
+}
+
+.component-feedback a {
+  color: var(--vp-c-brand-1);
+  font-weight: 500;
+}
+
+/* Fokussynlighet for tastaturnavigasjon */
+.component-tab-btn:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: -2px;
+}
+
+.component-card:focus-visible,
+.section-card:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+}
+
+/* Responsiv tilpasning for små skjermer */
+@media (max-width: 640px) {
+  .component-grid,
+  .section-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mørkt modus: synlige skygger på kort */
+.dark .component-card:hover,
+.dark .section-card:hover {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.24);
 }

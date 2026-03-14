@@ -1,183 +1,206 @@
 # Komponenter
 
-Biblioteket inneholder 40 ferdige komponenter fordelt på fire kategorier.
-
-## Kjernekomponenter
+Designsystemet inneholder grunnleggende komponenter som kan settes sammen for å bygge brukergrensesnitt i Flutter-applikasjoner.
 
 <div class="component-grid">
-  <a href="./kjernekomponenter/ds-button" class="component-card">
-    <h3>DsButton</h3>
-    <p>Knapp med tre varianter og støtte for ikon, lastetilstand og deaktivert tilstand.</p>
-  </a>
-  <a href="./kjernekomponenter/ds-textfield" class="component-card">
-    <h3>DsTextfield</h3>
-    <p>Tekstfelt for enlinjes inndata.</p>
-  </a>
-  <a href="./kjernekomponenter/ds-textarea" class="component-card">
-    <h3>DsTextarea</h3>
-    <p>Tekstområde for flerlinjes inndata.</p>
-  </a>
-  <a href="./kjernekomponenter/ds-checkbox" class="component-card">
-    <h3>DsCheckbox</h3>
-    <p>Avkrysningsboks med støtte for ubestemt tilstand.</p>
-  </a>
-  <a href="./kjernekomponenter/ds-radio" class="component-card">
-    <h3>DsRadio</h3>
-    <p>Radioknapp for enkeltvalg i gruppe.</p>
-  </a>
-  <a href="./kjernekomponenter/ds-switch" class="component-card">
-    <h3>DsSwitch</h3>
-    <p>Av/på-bryter.</p>
-  </a>
-  <a href="./kjernekomponenter/ds-alert" class="component-card">
-    <h3>DsAlert</h3>
+  <a href="./ds-alert" class="component-card">
+    <span class="component-card-icon">⚠️</span>
+    <h3>Alert</h3>
     <p>Varselboks med alvorlighetsgrader.</p>
   </a>
-  <a href="./kjernekomponenter/ds-card" class="component-card">
-    <h3>DsCard</h3>
-    <p>Kort med valgfrie underseksjoner.</p>
-  </a>
-  <a href="./kjernekomponenter/ds-tag" class="component-card">
-    <h3>DsTag</h3>
-    <p>Etikett for kategorisering.</p>
-  </a>
-  <a href="./kjernekomponenter/ds-chip" class="component-card">
-    <h3>DsChip</h3>
-    <p>Kompakt element for filtrering eller valg.</p>
-  </a>
-  <a href="./kjernekomponenter/ds-badge" class="component-card">
-    <h3>DsBadge</h3>
-    <p>Merke for telling eller statusindikasjon.</p>
-  </a>
-  <a href="./kjernekomponenter/ds-spinner" class="component-card">
-    <h3>DsSpinner</h3>
-    <p>Lastindikator.</p>
-  </a>
-  <a href="./kjernekomponenter/ds-divider" class="component-card">
-    <h3>DsDivider</h3>
-    <p>Skillelinje.</p>
-  </a>
-  <a href="./kjernekomponenter/ds-link" class="component-card">
-    <h3>DsLink</h3>
-    <p>Lenke med Designsystemet-styling.</p>
-  </a>
-</div>
-
-## Navigasjon
-
-<div class="component-grid">
-  <a href="./navigasjon/ds-tabs" class="component-card">
-    <h3>DsTabs</h3>
-    <p>Fanenavigasjon for å veksle mellom innholdsvisninger.</p>
-  </a>
-  <a href="./navigasjon/ds-dialog" class="component-card">
-    <h3>DsDialog</h3>
-    <p>Dialogvindu for bekreftelser og skjemaer.</p>
-  </a>
-  <a href="./navigasjon/ds-dropdown" class="component-card">
-    <h3>DsDropdown</h3>
-    <p>Nedtrekksmeny med valgmuligheter.</p>
-  </a>
-  <a href="./navigasjon/ds-select" class="component-card">
-    <h3>DsSelect</h3>
-    <p>Velgerliste for enkeltvalg.</p>
-  </a>
-  <a href="./navigasjon/ds-pagination" class="component-card">
-    <h3>DsPagination</h3>
-    <p>Sidenavigasjon for paginerte lister.</p>
-  </a>
-  <a href="./navigasjon/ds-table" class="component-card">
-    <h3>DsTable</h3>
-    <p>Tabell for strukturert datavisning.</p>
-  </a>
-  <a href="./navigasjon/ds-breadcrumbs" class="component-card">
-    <h3>DsBreadcrumbs</h3>
-    <p>Brødsmulesti for hierarkisk navigasjon.</p>
-  </a>
-  <a href="./navigasjon/ds-search" class="component-card">
-    <h3>DsSearch</h3>
-    <p>Søkefelt med forslag.</p>
-  </a>
-  <a href="./navigasjon/ds-tooltip" class="component-card">
-    <h3>DsTooltip</h3>
-    <p>Verktøytips for tilleggsinformasjon.</p>
-  </a>
-  <a href="./navigasjon/ds-popover" class="component-card">
-    <h3>DsPopover</h3>
-    <p>Flytende innholdspanel utløst av brukerinteraksjon.</p>
-  </a>
-  <a href="./navigasjon/ds-avatar" class="component-card">
-    <h3>DsAvatar</h3>
+  <a href="./ds-avatar" class="component-card">
+    <span class="component-card-icon">👤</span>
+    <h3>Avatar</h3>
     <p>Brukeravatar med bilde eller initialer.</p>
   </a>
-  <a href="./navigasjon/ds-avatar-stack" class="component-card">
-    <h3>DsAvatarStack</h3>
+  <a href="./ds-avatar-stack" class="component-card">
+    <span class="component-card-icon">👥</span>
+    <h3>AvatarStack</h3>
     <p>Stabel av avatarer for gruppevisning.</p>
   </a>
-  <a href="./navigasjon/ds-toggle-group" class="component-card">
-    <h3>DsToggleGroup</h3>
-    <p>Gruppert veksleknapper for enkeltvalg.</p>
+  <a href="./ds-badge" class="component-card">
+    <span class="component-card-icon">🔢</span>
+    <h3>Badge</h3>
+    <p>Merke for telling eller statusindikasjon.</p>
   </a>
-  <a href="./navigasjon/ds-suggestion" class="component-card">
-    <h3>DsSuggestion</h3>
-    <p>Forslagskomponent for autofullføring.</p>
+  <a href="./ds-breadcrumbs" class="component-card">
+    <span class="component-card-icon">🧭</span>
+    <h3>Breadcrumbs</h3>
+    <p>Brødsmulesti for hierarkisk navigasjon.</p>
   </a>
-</div>
-
-## Skjema
-
-<div class="component-grid">
-  <a href="./skjema/ds-field" class="component-card">
-    <h3>DsField</h3>
-    <p>Skjemafelt med etikett, beskrivelse og feilmelding.</p>
+  <a href="./ds-button" class="component-card">
+    <span class="component-card-icon">🔘</span>
+    <h3>Button</h3>
+    <p>Knapp med tre varianter og støtte for ikon, lastetilstand og deaktivert tilstand.</p>
   </a>
-  <a href="./skjema/ds-fieldset" class="component-card">
-    <h3>DsFieldset</h3>
-    <p>Gruppering av relaterte skjemaelementer.</p>
+  <a href="./ds-card" class="component-card">
+    <span class="component-card-icon">🃏</span>
+    <h3>Card</h3>
+    <p>Kort med valgfrie underseksjoner.</p>
   </a>
-  <a href="./skjema/ds-input" class="component-card">
-    <h3>DsInput</h3>
-    <p>Grunnleggende inndatafelt.</p>
+  <a href="./ds-checkbox" class="component-card">
+    <span class="component-card-icon">☑️</span>
+    <h3>Checkbox</h3>
+    <p>Avkrysningsboks med støtte for ubestemt tilstand.</p>
   </a>
-  <a href="./skjema/ds-error-summary" class="component-card">
-    <h3>DsErrorSummary</h3>
-    <p>Sammendrag av skjemafeil.</p>
+  <a href="./ds-chip" class="component-card">
+    <span class="component-card-icon">🏷️</span>
+    <h3>Chip</h3>
+    <p>Kompakt element for filtrering eller valg.</p>
   </a>
-  <a href="./skjema/ds-details" class="component-card">
-    <h3>DsDetails</h3>
+  <a href="./ds-details" class="component-card">
+    <span class="component-card-icon">📂</span>
+    <h3>Details</h3>
     <p>Utvidbart innholdspanel.</p>
   </a>
-  <a href="./skjema/ds-list" class="component-card">
-    <h3>DsList</h3>
-    <p>Liste med punkter eller nummerering.</p>
+  <a href="./ds-dialog" class="component-card">
+    <span class="component-card-icon">💬</span>
+    <h3>Dialog</h3>
+    <p>Dialogvindu for bekreftelser og skjemaer.</p>
   </a>
-  <a href="./skjema/ds-skeleton" class="component-card">
-    <h3>DsSkeleton</h3>
-    <p>Plassholder for innhold som lastes.</p>
+  <a href="./ds-divider" class="component-card">
+    <span class="component-card-icon">➖</span>
+    <h3>Divider</h3>
+    <p>Skillelinje.</p>
   </a>
-  <a href="./skjema/ds-skip-link" class="component-card">
-    <h3>DsSkipLink</h3>
-    <p>Hopp-til-hovedinnhold-lenke for tastaturnavigasjon.</p>
+  <a href="./ds-dropdown" class="component-card">
+    <span class="component-card-icon">📋</span>
+    <h3>Dropdown</h3>
+    <p>Nedtrekksmeny med valgmuligheter.</p>
   </a>
-</div>
-
-## Typografi
-
-<div class="component-grid">
-  <a href="./typografi/ds-heading" class="component-card">
-    <h3>DsHeading</h3>
+  <a href="./ds-error-summary" class="component-card">
+    <span class="component-card-icon">❌</span>
+    <h3>ErrorSummary</h3>
+    <p>Sammendrag av skjemafeil.</p>
+  </a>
+  <a href="./ds-field" class="component-card">
+    <span class="component-card-icon">📝</span>
+    <h3>Field</h3>
+    <p>Skjemafelt med etikett, beskrivelse og feilmelding.</p>
+  </a>
+  <a href="./ds-fieldset" class="component-card">
+    <span class="component-card-icon">📦</span>
+    <h3>Fieldset</h3>
+    <p>Gruppering av relaterte skjemaelementer.</p>
+  </a>
+  <a href="./ds-heading" class="component-card">
+    <span class="component-card-icon">🔤</span>
+    <h3>Heading</h3>
     <p>Overskrift med støtte for ulike nivåer.</p>
   </a>
-  <a href="./typografi/ds-paragraph" class="component-card">
-    <h3>DsParagraph</h3>
-    <p>Avsnitt med Designsystemet-typografi.</p>
+  <a href="./ds-input" class="component-card">
+    <span class="component-card-icon">⌨️</span>
+    <h3>Input</h3>
+    <p>Grunnleggende inndatafelt.</p>
   </a>
-  <a href="./typografi/ds-label" class="component-card">
-    <h3>DsLabel</h3>
+  <a href="./ds-label" class="component-card">
+    <span class="component-card-icon">🏷️</span>
+    <h3>Label</h3>
     <p>Etikett for skjemaelementer.</p>
   </a>
-  <a href="./typografi/ds-validation-message" class="component-card">
-    <h3>DsValidationMessage</h3>
+  <a href="./ds-link" class="component-card">
+    <span class="component-card-icon">🔗</span>
+    <h3>Link</h3>
+    <p>Lenke med Designsystemet-styling.</p>
+  </a>
+  <a href="./ds-list" class="component-card">
+    <span class="component-card-icon">📃</span>
+    <h3>List</h3>
+    <p>Liste med punkter eller nummerering.</p>
+  </a>
+  <a href="./ds-pagination" class="component-card">
+    <span class="component-card-icon">📄</span>
+    <h3>Pagination</h3>
+    <p>Sidenavigasjon for paginerte lister.</p>
+  </a>
+  <a href="./ds-paragraph" class="component-card">
+    <span class="component-card-icon">📖</span>
+    <h3>Paragraph</h3>
+    <p>Avsnitt med Designsystemet-typografi.</p>
+  </a>
+  <a href="./ds-popover" class="component-card">
+    <span class="component-card-icon">💭</span>
+    <h3>Popover</h3>
+    <p>Flytende innholdspanel utløst av brukerinteraksjon.</p>
+  </a>
+  <a href="./ds-radio" class="component-card">
+    <span class="component-card-icon">🔘</span>
+    <h3>Radio</h3>
+    <p>Radioknapp for enkeltvalg i gruppe.</p>
+  </a>
+  <a href="./ds-search" class="component-card">
+    <span class="component-card-icon">🔍</span>
+    <h3>Search</h3>
+    <p>Søkefelt med forslag.</p>
+  </a>
+  <a href="./ds-select" class="component-card">
+    <span class="component-card-icon">📥</span>
+    <h3>Select</h3>
+    <p>Velgerliste for enkeltvalg.</p>
+  </a>
+  <a href="./ds-skeleton" class="component-card">
+    <span class="component-card-icon">💀</span>
+    <h3>Skeleton</h3>
+    <p>Plassholder for innhold som lastes.</p>
+  </a>
+  <a href="./ds-skip-link" class="component-card">
+    <span class="component-card-icon">⏭️</span>
+    <h3>SkipLink</h3>
+    <p>Hopp-til-hovedinnhold-lenke for tastaturnavigasjon.</p>
+  </a>
+  <a href="./ds-spinner" class="component-card">
+    <span class="component-card-icon">⏳</span>
+    <h3>Spinner</h3>
+    <p>Lastindikator.</p>
+  </a>
+  <a href="./ds-suggestion" class="component-card">
+    <span class="component-card-icon">💡</span>
+    <h3>Suggestion</h3>
+    <p>Forslagskomponent for autofullføring.</p>
+  </a>
+  <a href="./ds-switch" class="component-card">
+    <span class="component-card-icon">🔀</span>
+    <h3>Switch</h3>
+    <p>Av/på-bryter.</p>
+  </a>
+  <a href="./ds-table" class="component-card">
+    <span class="component-card-icon">📊</span>
+    <h3>Table</h3>
+    <p>Tabell for strukturert datavisning.</p>
+  </a>
+  <a href="./ds-tabs" class="component-card">
+    <span class="component-card-icon">📑</span>
+    <h3>Tabs</h3>
+    <p>Fanenavigasjon for å veksle mellom innholdsvisninger.</p>
+  </a>
+  <a href="./ds-tag" class="component-card">
+    <span class="component-card-icon">🏷️</span>
+    <h3>Tag</h3>
+    <p>Etikett for kategorisering.</p>
+  </a>
+  <a href="./ds-textarea" class="component-card">
+    <span class="component-card-icon">📝</span>
+    <h3>Textarea</h3>
+    <p>Tekstområde for flerlinjes inndata.</p>
+  </a>
+  <a href="./ds-textfield" class="component-card">
+    <span class="component-card-icon">✏️</span>
+    <h3>Textfield</h3>
+    <p>Tekstfelt for enlinjes inndata.</p>
+  </a>
+  <a href="./ds-toggle-group" class="component-card">
+    <span class="component-card-icon">🔀</span>
+    <h3>ToggleGroup</h3>
+    <p>Gruppert veksleknapper for enkeltvalg.</p>
+  </a>
+  <a href="./ds-tooltip" class="component-card">
+    <span class="component-card-icon">ℹ️</span>
+    <h3>Tooltip</h3>
+    <p>Verktøytips for tilleggsinformasjon.</p>
+  </a>
+  <a href="./ds-validation-message" class="component-card">
+    <span class="component-card-icon">⚡</span>
+    <h3>ValidationMessage</h3>
     <p>Valideringsmelding for skjemafelt.</p>
   </a>
 </div>
