@@ -6,7 +6,7 @@ Komponentbiblioteket inkluderer en MCP-server (Model Context Protocol) som gjør
 
 [Model Context Protocol](https://modelcontextprotocol.io) er en åpen standard som lar AI-assistenter koble seg til eksterne datakilder og verktøy. MCP-serveren i dette biblioteket gir AI-assistenten din tilgang til:
 
-- Alle 43 komponent-APIer med egenskaper, typer og eksempler
+- Alle 40 komponenter (43 inkludert underkomponenter) med egenskaper, typer og eksempler
 - Migrasjonsråd fra Material-widgets til Designsystemet-ekvivalenter
 - Komplette designtokens (farger, typografi, størrelser, skygger)
 - Dokumentasjonssøk på tvers av alle sider

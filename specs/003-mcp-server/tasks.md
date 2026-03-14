@@ -32,7 +32,7 @@
 
 - [x] T005 Create src/parsers/dart-parser.ts in mcp-server/ — implement two-pass regex parser: Pass 1 extracts constructor parameters via `/const\s+\w+\(\{([^}]+)\}\)/s`, Pass 2 extracts field types via `/final\s+([\w<>,?\s]+\??)\s+(\w+)\s*;/g`, correlate by name, skip `super.key`. Export `parseComponent(filePath): Component` and `parseAllComponents(libDir): Component[]`
 - [x] T006 [P] Create src/parsers/markdown-parser.ts in mcp-server/ — parse documentation markdown files to extract title, sections (by heading), fenced code blocks as examples, and property tables. Export `parseDocPage(filePath): DocumentationPage` and `extractCodeExamples(content): CodeExample[]`
-- [x] T007 [P] Create src/data/categories.json in mcp-server/ — map each of the 42 components to a category: form (DsInput, DsTextfield, DsTextarea, DsCheckbox, DsRadio, DsSwitch, DsSelect, DsDropdown, DsField, DsFieldset, DsErrorSummary), navigation (DsButton, DsLink, DsBreadcrumbs, DsPagination, DsSkipLink, DsTabs), layout (DsCard, DsCardHeader, DsCardBlock, DsCardFooter, DsDialog, DsPopover, DsDivider), content (DsAlert, DsBadge, DsTag, DsChip, DsAvatar, DsAvatarStack, DsSpinner, DsSkeleton), interactive (DsToggleGroup, DsTooltip, DsDetails, DsSearch, DsSuggestion, DsList, DsTable), typography (DsHeading, DsParagraph, DsLabel, DsValidationMessage)
+- [x] T007 [P] Create src/data/categories.json in mcp-server/ — map each of the 43 widgets to a category: form (DsInput, DsTextfield, DsTextarea, DsCheckbox, DsRadio, DsSwitch, DsSelect, DsDropdown, DsField, DsFieldset, DsErrorSummary), navigation (DsButton, DsLink, DsBreadcrumbs, DsPagination, DsSkipLink, DsTabs), layout (DsCard, DsCardHeader, DsCardBlock, DsCardFooter, DsDialog, DsPopover, DsDivider), content (DsAlert, DsBadge, DsTag, DsChip, DsAvatar, DsAvatarStack, DsSpinner, DsSkeleton), interactive (DsToggleGroup, DsTooltip, DsDetails, DsSearch, DsSuggestion, DsList, DsTable), typography (DsHeading, DsParagraph, DsLabel, DsValidationMessage)
 - [x] T008 Create src/index.ts and src/server.ts in mcp-server/ — index.ts: instantiate McpServer({name: "komponentbibliotek", version: from package.json}), connect StdioServerTransport; server.ts: export createServer() that creates McpServer and registers all tools and resources (initially empty, tools added in later phases)
 - [x] T009 [P] Write parser tests in mcp-server/tests/parsers/dart-parser.test.ts — test parseComponent against actual lib/src/components/button/ds_button.dart: verify name="DsButton", verify properties include variant (type DsButtonVariant, default DsButtonVariant.primary), onPressed (required, VoidCallback?), child (required, Widget). Test parseComponent against lib/src/components/alert/ds_alert.dart for a second component
 
@@ -44,7 +44,7 @@
 
 **Goal**: AI assistants can look up any component by name and list all components by category
 
-**Independent Test**: Call `lookup_component` with "DsButton" and verify response contains all 10 properties, import statement, and code examples. Call `list_components` and verify all 42 components appear grouped by 6 categories.
+**Independent Test**: Call `lookup_component` with "DsButton" and verify response contains all 10 properties, import statement, and code examples. Call `list_components` and verify all 43 widgets appear grouped by 6 categories.
 
 ### Implementation for User Story 1
 
