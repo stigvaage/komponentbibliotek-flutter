@@ -43,9 +43,9 @@
 
 ### Verification for User Story 1
 
-- [ ] T004 [US1] Push changes to remote and create PR for branch 005-fix-build-deploy targeting main
-- [ ] T005 [US1] After PR merge, verify GitHub Actions shows "Deploy to GitHub Pages" workflow triggered automatically by the push event
-- [ ] T006 [US1] Verify workflow run completes with green check (no "workflow file issue" errors) — confirms FR-001, FR-003, FR-004, FR-005, FR-006, FR-007, FR-008
+- [x] T004 [US1] Push changes to remote and create PR for branch 005-fix-build-deploy targeting main
+- [x] T005 [US1] After PR merge, verify GitHub Actions shows "Deploy to GitHub Pages" workflow triggered automatically by the push event
+- [x] T006 [US1] Verify workflow run completes with green check (no "workflow file issue" errors) — confirms FR-001, FR-003, FR-004, FR-005, FR-006, FR-007, FR-008
 
 **Checkpoint**: US1 is verified when the workflow runs automatically on push and completes successfully.
 
@@ -59,7 +59,7 @@
 
 ### Verification for User Story 2
 
-- [ ] T007 [US2] Navigate to Actions tab → "Deploy to GitHub Pages" workflow → verify "Run workflow" dropdown button is visible (confirms FR-002, workflow_dispatch trigger is registered)
+- [x] T007 [US2] Navigate to Actions tab → "Deploy to GitHub Pages" workflow → verify "Run workflow" dropdown button is visible (confirms FR-002, workflow_dispatch trigger is registered)
 - [ ] T008 [US2] Click "Run workflow" and verify the pipeline executes the same build+deploy steps as an automatic run and completes successfully
 
 **Checkpoint**: US2 is verified when manual trigger works and deploys successfully.
@@ -74,9 +74,9 @@
 
 ### Verification for User Story 3
 
-- [ ] T009 [US3] Visit https://stigvaage.github.io/komponentbibliotek-flutter-poc/ — verify docs site loads with navigation, search, and all page sections (intro, kom-i-gang, komponenter, monstre, god-praksis)
-- [ ] T010 [US3] Click "Widgetbook" link in docs navigation (or visit https://stigvaage.github.io/komponentbibliotek-flutter-poc/widgetbook/) — verify Widgetbook app loads and displays component catalog with theme, color scope, and size scope addons (confirms FR-010)
-- [ ] T011 [US3] Test deep-links: navigate directly to a component page (e.g., /komponenter/ds-button.html) and a Widgetbook deep-link — verify both resolve without 404 errors
+- [x] T009 [US3] Visit https://stigvaage.github.io/komponentbibliotek-flutter-poc/ — verify docs site loads with navigation, search, and all page sections (intro, kom-i-gang, komponenter, monstre, god-praksis)
+- [x] T010 [US3] Click "Widgetbook" link in docs navigation (or visit https://stigvaage.github.io/komponentbibliotek-flutter-poc/widgetbook/) — verify Widgetbook app loads and displays component catalog with theme, color scope, and size scope addons (confirms FR-010)
+- [x] T011 [US3] Test deep-links: navigate directly to a component page (e.g., /komponenter/ds-button.html) and a Widgetbook deep-link — verify both resolve without 404 errors
 
 **Checkpoint**: US3 is verified when all pages and Widgetbook load correctly without errors.
 
