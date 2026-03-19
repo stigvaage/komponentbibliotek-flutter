@@ -33,4 +33,4 @@ Flutter er et naturlig valg for dette:
 - **Pikselpresist grensesnitt** — Flutter tegner sitt eget brukergrensesnitt og er ikke avhengig av plattformens native komponenter, noe som gir full kontroll over at Designsystemets spesifikasjoner følges nøyaktig.
 - **Voksende bruk i offentlig sektor** — Stadig flere norske offentlige virksomheter evaluerer eller tar i bruk Flutter for sine mobilapplikasjoner.
 
-`komponentbibliotek_flutter` er Flutter-implementasjonen av Designsystemet. Biblioteket gjenskaper alle 40 komponenter med tokens, tilgjengelighet og temaer som samsvarer med den offisielle spesifikasjonen — slik at Flutter-utviklere i offentlig sektor kan bygge tjenester som er i tråd med Designsystemet uten å måtte implementere komponentene selv.
+`designsystemet_flutter` er Flutter-implementasjonen av Designsystemet. Biblioteket gjenskaper alle 40 komponenter med tokens, tilgjengelighet og temaer som samsvarer med den offisielle spesifikasjonen — slik at Flutter-utviklere i offentlig sektor kan bygge tjenester som er i tråd med Designsystemet uten å måtte implementere komponentene selv.

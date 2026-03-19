@@ -1,6 +1,6 @@
 # Om Flutter-biblioteket
 
-`komponentbibliotek_flutter` er en fullstendig Flutter-implementasjon av [Designsystemet](https://designsystemet.no) fra Digitaliseringsdirektoratet. Biblioteket gir deg 40 ferdige, tilgjengelige og tokendrevne UI-komponenter — klare til bruk i offentlige digitale tjenester.
+`designsystemet_flutter` er en fullstendig Flutter-implementasjon av [Designsystemet](https://designsystemet.no) fra Digitaliseringsdirektoratet. Biblioteket gir deg 40 ferdige, tilgjengelige og tokendrevne UI-komponenter — klare til bruk i offentlige digitale tjenester.
 
 ## 40 komponenter i fire kategorier
 

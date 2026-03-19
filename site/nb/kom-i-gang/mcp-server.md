@@ -34,11 +34,11 @@ Legg til i prosjektets `.mcp.json`:
 ```json
 {
   "mcpServers": {
-    "komponentbibliotek": {
+    "designsystemet": {
       "command": "node",
-      "args": ["/sti/til/komponentbibliotek.flutter/mcp-server/dist/index.js"],
+      "args": ["/sti/til/designsystemet-flutter/mcp-server/dist/index.js"],
       "env": {
-        "REPO_ROOT": "/sti/til/komponentbibliotek.flutter"
+        "REPO_ROOT": "/sti/til/designsystemet-flutter"
       }
     }
   }
@@ -50,11 +50,11 @@ For utvikling kan du bruke `tsx` i stedet:
 ```json
 {
   "mcpServers": {
-    "komponentbibliotek": {
+    "designsystemet": {
       "command": "npx",
-      "args": ["tsx", "/sti/til/komponentbibliotek.flutter/mcp-server/src/index.ts"],
+      "args": ["tsx", "/sti/til/designsystemet-flutter/mcp-server/src/index.ts"],
       "env": {
-        "REPO_ROOT": "/sti/til/komponentbibliotek.flutter"
+        "REPO_ROOT": "/sti/til/designsystemet-flutter"
       }
     }
   }
@@ -68,11 +68,11 @@ Legg til i `.vscode/mcp.json` i prosjektmappen din:
 ```json
 {
   "servers": {
-    "komponentbibliotek": {
+    "designsystemet": {
       "command": "node",
-      "args": ["/sti/til/komponentbibliotek.flutter/mcp-server/dist/index.js"],
+      "args": ["/sti/til/designsystemet-flutter/mcp-server/dist/index.js"],
       "env": {
-        "REPO_ROOT": "/sti/til/komponentbibliotek.flutter"
+        "REPO_ROOT": "/sti/til/designsystemet-flutter"
       }
     }
   }
@@ -86,11 +86,11 @@ Legg til i `.cursor/mcp.json`:
 ```json
 {
   "mcpServers": {
-    "komponentbibliotek": {
+    "designsystemet": {
       "command": "node",
-      "args": ["/sti/til/komponentbibliotek.flutter/mcp-server/dist/index.js"],
+      "args": ["/sti/til/designsystemet-flutter/mcp-server/dist/index.js"],
       "env": {
-        "REPO_ROOT": "/sti/til/komponentbibliotek.flutter"
+        "REPO_ROOT": "/sti/til/designsystemet-flutter"
       }
     }
   }
@@ -177,8 +177,8 @@ For teambruk kan serveren også kjøres som Docker-container:
 
 ```bash
 # Fra repositoryets rotmappe
-docker build -t komponentbibliotek-mcp -f mcp-server/Dockerfile .
-docker run -i komponentbibliotek-mcp
+docker build -t designsystemet-flutter-mcp -f mcp-server/Dockerfile .
+docker run -i designsystemet-flutter-mcp
 ```
 
 ## Feilsøking

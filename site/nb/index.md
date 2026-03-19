@@ -39,5 +39,5 @@ features:
 ---
 
 <div style="text-align: center; margin-top: 2rem; padding: 1rem; color: var(--vp-c-text-2); font-size: 14px;">
-  Utviklet av <strong>Stig H. Våge</strong> og <strong><a href="https://claude.ai/claude-code" style="color: var(--vp-c-brand-1);">Claude Code</a></strong> · Basert på <a href="https://designsystemet.no" style="color: var(--vp-c-brand-1);">Designsystemet</a> fra <a href="https://www.digdir.no" style="color: var(--vp-c-brand-1);">Digitaliseringsdirektoratet</a>
+  Uoffisiell Flutter-implementasjon av <a href="https://designsystemet.no" style="color: var(--vp-c-brand-1);">Designsystemet</a> fra <a href="https://www.digdir.no" style="color: var(--vp-c-brand-1);">Digitaliseringsdirektoratet</a>. Utviklet av <strong>Stig H. Våge</strong>.
 </div>

@@ -1,6 +1,6 @@
 # Komponentreferanse
 
-Fullstendig referanse for alle 40 komponenter i `komponentbibliotek_flutter`. Hver komponent er dokumentert med beskrivelse, viktige egenskaper og kodeeksempel.
+Fullstendig referanse for alle 40 komponenter i `designsystemet_flutter`. Hver komponent er dokumentert med beskrivelse, viktige egenskaper og kodeeksempel.
 
 > **Felles egenskaper:** Alle synlige komponenter aksepterer valgfri `DsSize? size` (arves fra `DsSizeScope` når `null`) og `DsColor? color` (arves fra `DsColorScope` når `null`).
 

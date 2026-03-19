@@ -3,7 +3,7 @@ const props = defineProps<{
   component: string
 }>()
 
-const issueUrl = `https://github.com/stigvaage/komponentbibliotek-flutter/issues/new?title=${encodeURIComponent(`Innspill: ${props.component}`)}&labels=komponent-innspill`
+const issueUrl = `https://github.com/stigvaage/designsystemet-flutter/issues/new?title=${encodeURIComponent(`Innspill: ${props.component}`)}&labels=komponent-innspill`
 </script>
 
 <template>

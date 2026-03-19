@@ -5,7 +5,7 @@ Et komplett minimalt eksempel som viser hvordan du kommer i gang.
 ## Minimalt eksempel
 
 ```dart
-import 'package:komponentbibliotek_flutter/komponentbibliotek_flutter.dart';
+import 'package:designsystemet_flutter/designsystemet_flutter.dart';
 import 'package:flutter/widgets.dart';
 
 void main() {

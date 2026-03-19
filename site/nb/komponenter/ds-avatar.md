@@ -65,7 +65,7 @@ Bildet lastes asynkront. Initialer vises som plassholder under lasting og som fa
 ## Import
 
 ```dart
-import 'package:komponentbibliotek_flutter/components.dart';
+import 'package:designsystemet_flutter/components.dart';
 ```
 
 </template>

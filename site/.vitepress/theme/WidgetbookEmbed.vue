@@ -5,7 +5,7 @@ const props = defineProps<{
   component: string
 }>()
 
-const baseUrl = import.meta.env.BASE_URL ?? '/komponentbibliotek-flutter/'
+const baseUrl = import.meta.env.BASE_URL ?? '/designsystemet-flutter/'
 const widgetbookUrl = computed(() => {
   const path = props.component
     .replace(/ /g, '-')

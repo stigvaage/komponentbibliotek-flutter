@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 import { writeFileSync, mkdirSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
 
-const base = '/komponentbibliotek-flutter/'
+const base = '/designsystemet-flutter/'
 
 const redirects: Record<string, string> = {
   // komponenter/kjernekomponenter → komponenter
@@ -267,17 +267,17 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/stigvaage/komponentbibliotek-flutter/edit/main/site/nb/:path',
+      pattern: 'https://github.com/stigvaage/designsystemet-flutter/edit/main/site/nb/:path',
       text: 'Rediger denne siden på GitHub',
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/stigvaage/komponentbibliotek-flutter' },
+      { icon: 'github', link: 'https://github.com/stigvaage/designsystemet-flutter' },
     ],
 
     footer: {
-      message: 'Utgitt under MIT-lisens. Basert på <a href="https://designsystemet.no">Designsystemet</a> fra <a href="https://www.digdir.no">Digitaliseringsdirektoratet</a>.',
-      copyright: 'Utviklet av Stig H. Våge og <a href="https://claude.ai/claude-code">Claude Code</a>',
+      message: 'Uoffisiell Flutter-implementasjon av <a href="https://designsystemet.no">Designsystemet</a> fra <a href="https://www.digdir.no">Digitaliseringsdirektoratet</a>. Utgitt under MIT-lisens.',
+      copyright: 'Utviklet av Stig H. Våge',
     },
   },
 })

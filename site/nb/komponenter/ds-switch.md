@@ -81,7 +81,7 @@ DsSwitch(
 ## Import
 
 ```dart
-import 'package:komponentbibliotek_flutter/components.dart';
+import 'package:designsystemet_flutter/components.dart';
 ```
 
 </template>

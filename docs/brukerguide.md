@@ -1,10 +1,10 @@
-# Brukerguide for komponentbibliotek_flutter
+# Brukerguide for designsystemet_flutter
 
 ## Innledning
 
 [Designsystemet](https://designsystemet.no) er det norske offentlige designsystemet, utviklet og vedlikeholdt av Digitaliseringsdirektoratet (Digdir). Det tilbyr et helhetlig sett med designtokens, komponenter og retningslinjer for å bygge tilgjengelige, konsistente digitale tjenester i offentlig sektor.
 
-`komponentbibliotek_flutter` er en fullstendig Flutter-implementasjon av Designsystemet. Biblioteket gir deg 40 ferdige komponenter, et tokendrevet temasystem, og full støtte for egendefinerte temaer -- alt uten avhengigheter til Material eller Cupertino.
+`designsystemet_flutter` er en fullstendig Flutter-implementasjon av Designsystemet. Biblioteket gir deg 40 ferdige komponenter, et tokendrevet temasystem, og full støtte for egendefinerte temaer -- alt uten avhengigheter til Material eller Cupertino.
 
 Denne brukerguiden dekker alt du trenger for å ta biblioteket i bruk, fra oppsett og temahåndtering til detaljert bruk av komponenter og tilgjengelighet.
 
@@ -24,7 +24,7 @@ Legg til pakken i `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  komponentbibliotek_flutter: ^1.0.0
+  designsystemet_flutter: ^1.0.0
 ```
 
 Kjør installasjonen:
@@ -36,20 +36,20 @@ flutter pub get
 ### Importer biblioteket
 
 ```dart
-import 'package:komponentbibliotek_flutter/komponentbibliotek_flutter.dart';
+import 'package:designsystemet_flutter/designsystemet_flutter.dart';
 ```
 
 For mer granulerte importer (bedre tree-shaking) kan du bruke separate inngangspunkter:
 
 ```dart
 // Kun tema-infrastruktur
-import 'package:komponentbibliotek_flutter/theme.dart';
+import 'package:designsystemet_flutter/theme.dart';
 
 // Kun komponenter
-import 'package:komponentbibliotek_flutter/components.dart';
+import 'package:designsystemet_flutter/components.dart';
 
 // Kun typografi-komponenter
-import 'package:komponentbibliotek_flutter/typography.dart';
+import 'package:designsystemet_flutter/typography.dart';
 ```
 
 ### Pakk inn applikasjonen
@@ -57,7 +57,7 @@ import 'package:komponentbibliotek_flutter/typography.dart';
 Pakk inn rotwidgeten din med `DsTheme` for å gjøre temaet tilgjengelig for alle komponenter:
 
 ```dart
-import 'package:komponentbibliotek_flutter/komponentbibliotek_flutter.dart';
+import 'package:designsystemet_flutter/designsystemet_flutter.dart';
 import 'package:flutter/widgets.dart';
 
 void main() {
@@ -1018,7 +1018,7 @@ Dette oppretter en `design-tokens/`-mappe med W3C DTCG-format JSON-filer.
 ### Steg 3: Generer Dart-temafil
 
 ```bash
-dart run komponentbibliotek_flutter:generate \
+dart run designsystemet_flutter:generate \
   --tokens-dir ./design-tokens \
   --output lib/generated/
 ```
