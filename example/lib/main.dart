@@ -261,7 +261,7 @@ class _ExampleAppState extends State<ExampleApp> {
                 const DsDivider(),
                 const SizedBox(height: 8),
                 DsParagraph(
-                  text: 'designsystemet_flutter v0.0.1',
+                  text: 'designsystemet_flutter v0.2.0',
                   bodySize: DsBodySize.xs,
                   color: DsColor.neutral,
                 ),

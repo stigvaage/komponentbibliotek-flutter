@@ -1,6 +1,6 @@
 name: designsystemet_flutter
 description: Uoffisiell Flutter-implementasjon av Designsystemet (designsystemet.no) fra Digitaliseringsdirektoratet.
-version: 0.0.1
+version: 0.2.0
 homepage: https://designsystemet.no
 repository: https://github.com/stigvaage/designsystemet-flutter
 
