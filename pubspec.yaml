@@ -2,7 +2,7 @@ name: komponentbibliotek_flutter
 description: Flutter component library implementing the Norwegian Designsystemet (designsystemet.no) design system.
 version: 0.0.1
 homepage: https://designsystemet.no
-repository: https://github.com/user/komponentbibliotek.flutter
+repository: https://github.com/stigvaage/komponentbibliotek-flutter
 
 environment:
   sdk: ^3.3.0

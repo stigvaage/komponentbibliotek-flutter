@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 import { writeFileSync, mkdirSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
 
-const base = '/komponentbibliotek-flutter-poc/'
+const base = '/komponentbibliotek-flutter/'
 
 const redirects: Record<string, string> = {
   // komponenter/kjernekomponenter → komponenter
@@ -267,12 +267,12 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/stigvaage/komponentbibliotek-flutter-poc/edit/main/site/nb/:path',
+      pattern: 'https://github.com/stigvaage/komponentbibliotek-flutter/edit/main/site/nb/:path',
       text: 'Rediger denne siden på GitHub',
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/stigvaage/komponentbibliotek-flutter-poc' },
+      { icon: 'github', link: 'https://github.com/stigvaage/komponentbibliotek-flutter' },
     ],
 
     footer: {

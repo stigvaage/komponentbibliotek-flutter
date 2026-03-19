@@ -20,7 +20,7 @@ Takk for at du vil bidra til komponentbibliotek_flutter! Denne guiden forklarer 
 
 ```bash
 # Klon prosjektet
-git clone https://github.com/user/komponentbibliotek.flutter.git
+git clone https://github.com/stigvaage/komponentbibliotek-flutter.git
 cd komponentbibliotek.flutter
 
 # Installer avhengigheter
