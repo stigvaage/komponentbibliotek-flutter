@@ -1,8 +1,10 @@
 import { describe, it, expect } from "vitest";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { parseComponent } from "../../src/parsers/dart-parser.js";
 
-const repoRoot = "/Users/shv/git/repos/komponentbibliotek.flutter";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const repoRoot = path.resolve(__dirname, "../../..");
 
 describe("parseComponent", () => {
   describe("DsButton", () => {
