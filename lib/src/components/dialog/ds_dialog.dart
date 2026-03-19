@@ -175,7 +175,7 @@ class _DsDialogRoute<T> extends PopupRoute<T> {
   bool get barrierDismissible => true;
 
   @override
-  String? get barrierLabel => 'Dismiss';
+  String? get barrierLabel => 'Lukk';
 
   @override
   Duration get transitionDuration => const Duration(milliseconds: 200);
