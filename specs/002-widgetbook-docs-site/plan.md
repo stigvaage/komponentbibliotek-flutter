@@ -5,7 +5,7 @@
 
 ## Summary
 
-Set up Widgetbook as an interactive component catalog for `komponentbibliotek_flutter`, covering all 40 Designsystemet components with configurable knobs (size, color, variant, state), theme switching (light/dark), and Norwegian-language descriptions. Deploy automatically to GitHub Pages via GitHub Actions.
+Set up Widgetbook as an interactive component catalog for `designsystemet_flutter`, covering all 40 Designsystemet components with configurable knobs (size, color, variant, state), theme switching (light/dark), and Norwegian-language descriptions. Deploy automatically to GitHub Pages via GitHub Actions.
 
 ## Technical Context
 

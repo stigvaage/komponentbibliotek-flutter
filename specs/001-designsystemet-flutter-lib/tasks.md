@@ -27,7 +27,7 @@
 
 **Purpose**: Project initialization and Dart/Flutter package structure
 
-- [x] T001 Create Flutter package with `flutter create --template=package komponentbibliotek_flutter` and configure pubspec.yaml with name, description, SDK constraints (Dart >=3.3.0, Flutter >=3.19.0), and dev_dependencies (flutter_test, flutter_lints)
+- [x] T001 Create Flutter package with `flutter create --template=package designsystemet_flutter` and configure pubspec.yaml with name, description, SDK constraints (Dart >=3.3.0, Flutter >=3.19.0), and dev_dependencies (flutter_test, flutter_lints)
 - [x] T002 Configure analysis_options.yaml with flutter_lints and strict rules in analysis_options.yaml
 - [x] T003 [P] Add Inter font files (Regular 400, Medium 500, SemiBold 600) to lib/fonts/ and register them in pubspec.yaml under flutter.fonts
 - [x] T004 [P] Create directory structure per plan.md: lib/src/theme/, lib/src/components/, lib/src/typography/, lib/src/utils/, lib/generated/, bin/, test/theme/, test/components/, test/golden/, test/generator/, example/lib/
@@ -281,7 +281,7 @@
 - [x] T122 [P] Implement DsSkeleton: loading placeholder with shimmer animation in lib/src/components/skeleton/ds_skeleton.dart
 - [x] T123 [P] Implement DsSkipLink: accessibility skip-to-content link, visible on focus in lib/src/components/skip_link/ds_skip_link.dart
 - [x] T124 Create components.dart barrel export for all 40 component widgets in lib/components.dart
-- [x] T125 Create main barrel export komponentbibliotek_flutter.dart re-exporting theme.dart, components.dart, typography.dart in lib/komponentbibliotek_flutter.dart
+- [x] T125 Create main barrel export designsystemet_flutter.dart re-exporting theme.dart, components.dart, typography.dart in lib/designsystemet_flutter.dart
 - [x] T126 Build example/showcase app demonstrating all components with default Digdir theme and at least one custom theme in example/lib/main.dart
 - [x] T127 Run `flutter analyze` and fix any warnings or errors to achieve 100% clean score
 - [x] T128 Run full test suite `flutter test` and verify all tests pass

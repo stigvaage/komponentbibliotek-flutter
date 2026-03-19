@@ -7,7 +7,7 @@
 
 **Decision**: Delete the corrupted `deploy-docs.yml` and create a new file named `deploy-pages.yml`.
 
-**Rationale**: The repo rename from `komponentbibliotek-flutter` to `komponentbibliotek-flutter-poc` corrupted GitHub's internal workflow registry entry for `deploy-docs.yml`. Symptoms: workflow fails instantly (0s, 0 jobs) with "workflow file issue", `workflow_dispatch` not recognized, workflow name shows as filepath instead of the `name:` field. A completely new workflow file (`test.yml`) with identical structure works perfectly, proving the issue is registry-level, not YAML validity.
+**Rationale**: The repo rename from `designsystemet-flutter` to `designsystemet-flutter-poc` corrupted GitHub's internal workflow registry entry for `deploy-docs.yml`. Symptoms: workflow fails instantly (0s, 0 jobs) with "workflow file issue", `workflow_dispatch` not recognized, workflow name shows as filepath instead of the `name:` field. A completely new workflow file (`test.yml`) with identical structure works perfectly, proving the issue is registry-level, not YAML validity.
 
 **Alternatives considered**:
 - **Renaming `deploy-docs.yml` in-place** — Attempted in commit `070f68f` (rename to force re-registration). Failed; GitHub's registry is keyed beyond just the filename.
@@ -28,8 +28,8 @@
 **Decision**: No changes needed — all base paths are correct.
 
 **Rationale**: Verified through code inspection:
-- VitePress `config.ts` line 5: `base = '/komponentbibliotek-flutter-poc/'` — correct
-- Workflow `deploy-docs.yml` line 41: `--base-href /komponentbibliotek-flutter-poc/widgetbook/` — correct
+- VitePress `config.ts` line 5: `base = '/designsystemet-flutter-poc/'` — correct
+- Workflow `deploy-docs.yml` line 41: `--base-href /designsystemet-flutter-poc/widgetbook/` — correct
 - Widgetbook `web/index.html` line 4: `<base href="$FLUTTER_BASE_HREF">` — uses Flutter's build-time variable injection, correct
 
 These were fixed in commit `e1096ad` (fix: update base paths after repo rename).

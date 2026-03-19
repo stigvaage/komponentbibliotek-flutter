@@ -15,14 +15,14 @@ flutter run -d chrome
 
 ```bash
 cd widgetbook
-flutter build web --base-href /komponentbibliotek-flutter/
+flutter build web --base-href /designsystemet-flutter/
 ```
 
 Output is in `widgetbook/build/web/`.
 
 ## View deployed site
 
-Visit: `https://stigvaage.github.io/komponentbibliotek-flutter/`
+Visit: `https://stigvaage.github.io/designsystemet-flutter/`
 
 ## Add a new component use case
 

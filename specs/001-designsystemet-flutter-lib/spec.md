@@ -17,7 +17,7 @@
 
 ### User Story 1 - Theme a Flutter App with Designsystemet (Priority: P1)
 
-A Flutter developer adds the `komponentbibliotek_flutter` package to their project and wraps their app with a `DsTheme` widget using the built-in Digdir theme. All Designsystemet components rendered within the app automatically pick up the correct colors, typography, spacing, border radii, and shadows. The developer can switch between light and dark mode by changing the `brightness` parameter on `DsThemeData`.
+A Flutter developer adds the `designsystemet_flutter` package to their project and wraps their app with a `DsTheme` widget using the built-in Digdir theme. All Designsystemet components rendered within the app automatically pick up the correct colors, typography, spacing, border radii, and shadows. The developer can switch between light and dark mode by changing the `brightness` parameter on `DsThemeData`.
 
 **Why this priority**: Without a functioning theme infrastructure, no component can render correctly. This is the foundation that everything else depends on.
 
@@ -69,7 +69,7 @@ A Flutter developer builds a dashboard view using `DsCard`, `DsAlert`, `DsTabs`,
 
 ### User Story 4 - Import a Custom Theme from Designsystemet CLI (Priority: P4)
 
-A Flutter developer uses the Designsystemet CLI to generate design tokens from their custom `designsystemet.config.json`, then runs `dart run komponentbibliotek_flutter:generate` to produce typed Dart theme files. They import the generated theme class and apply it to their app, and all components automatically reflect the custom brand colors, typography, spacing, and border radii.
+A Flutter developer uses the Designsystemet CLI to generate design tokens from their custom `designsystemet.config.json`, then runs `dart run designsystemet_flutter:generate` to produce typed Dart theme files. They import the generated theme class and apply it to their app, and all components automatically reflect the custom brand colors, typography, spacing, and border radii.
 
 **Why this priority**: Theme portability is a core constitutional principle, but the built-in Digdir theme (P1) must work first. Custom theme import extends value to organizations with their own branding.
 
@@ -77,7 +77,7 @@ A Flutter developer uses the Designsystemet CLI to generate design tokens from t
 
 **Acceptance Scenarios**:
 
-1. **Given** a `designsystemet.config.json` with custom primary color `#FF0000`, **When** tokens are generated via CLI and then `dart run komponentbibliotek_flutter:generate --tokens-dir ./design-tokens --output lib/generated/` is run, **Then** a Dart file is produced containing a `DsThemeData` factory where the accent color scale is derived from `#FF0000`
+1. **Given** a `designsystemet.config.json` with custom primary color `#FF0000`, **When** tokens are generated via CLI and then `dart run designsystemet_flutter:generate --tokens-dir ./design-tokens --output lib/generated/` is run, **Then** a Dart file is produced containing a `DsThemeData` factory where the accent color scale is derived from `#FF0000`
 2. **Given** a generated theme file, **When** applied via `DsTheme(data: GeneratedTheme.light())`, **Then** all components use the custom theme's tokens instead of the Digdir defaults
 3. **Given** a config with custom `borderRadius: 8`, **When** the theme is generated, **Then** the `DsBorderRadiusTokens` values reflect the larger radius throughout all components
 

@@ -1,24 +1,24 @@
-# Public API Contract: komponentbibliotek_flutter
+# Public API Contract: designsystemet_flutter
 
 **Feature**: 001-designsystemet-flutter-lib
 **Date**: 2026-03-14
 
 ## Library Entry Points
 
-### Main barrel export (`komponentbibliotek_flutter.dart`)
+### Main barrel export (`designsystemet_flutter.dart`)
 
 Exports all public symbols. Consumers use:
 ```dart
-import 'package:komponentbibliotek_flutter/komponentbibliotek_flutter.dart';
+import 'package:designsystemet_flutter/designsystemet_flutter.dart';
 ```
 
 ### Separated entry points (for tree-shaking)
 
 | Entry point | Contents |
 |-------------|----------|
-| `package:komponentbibliotek_flutter/theme.dart` | DsTheme, DsThemeData, DsColorScheme, DsColorScale, DsSizeTokens, DsTypography, DsBorderRadiusTokens, DsShadowTokens, DsColorScope, DsSizeScope, enums |
-| `package:komponentbibliotek_flutter/components.dart` | All 40 component widgets |
-| `package:komponentbibliotek_flutter/typography.dart` | DsHeading, DsParagraph, DsLabel, DsValidationMessage |
+| `package:designsystemet_flutter/theme.dart` | DsTheme, DsThemeData, DsColorScheme, DsColorScale, DsSizeTokens, DsTypography, DsBorderRadiusTokens, DsShadowTokens, DsColorScope, DsSizeScope, enums |
+| `package:designsystemet_flutter/components.dart` | All 40 component widgets |
+| `package:designsystemet_flutter/typography.dart` | DsHeading, DsParagraph, DsLabel, DsValidationMessage |
 
 ## Theme API Contract
 
@@ -317,7 +317,7 @@ class DsParagraph extends StatelessWidget {
 ### Usage
 
 ```bash
-dart run komponentbibliotek_flutter:generate \
+dart run designsystemet_flutter:generate \
   --tokens-dir <path-to-design-tokens> \
   --output <output-directory>
 ```

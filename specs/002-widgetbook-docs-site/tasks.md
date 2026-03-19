@@ -19,7 +19,7 @@
 
 **Purpose**: Initialize Widgetbook Flutter web app with dependencies
 
-- [ ] T001 Create widgetbook/pubspec.yaml with dependencies: flutter, widgetbook, komponentbibliotek_flutter (path: ../), and configure for web in widgetbook/pubspec.yaml
+- [ ] T001 Create widgetbook/pubspec.yaml with dependencies: flutter, widgetbook, designsystemet_flutter (path: ../), and configure for web in widgetbook/pubspec.yaml
 - [ ] T002 Create widgetbook/web/index.html with Flutter web bootstrap and base href for GitHub Pages in widgetbook/web/index.html
 - [ ] T003 [P] Create directory structure: widgetbook/lib/components/, widgetbook/lib/helpers/ per plan.md
 - [ ] T004 [P] Create widgetbook/lib/main.dart entry point that launches the Widgetbook app
@@ -140,9 +140,9 @@
 
 **Goal**: Push to main auto-deploys to GitHub Pages
 
-- [ ] T059 [US4] Create GitHub Actions workflow: checkout, setup Flutter, `flutter build web --base-href /komponentbibliotek-flutter/` in widgetbook/, deploy build/web/ to gh-pages branch in .github/workflows/deploy-widgetbook.yml
+- [ ] T059 [US4] Create GitHub Actions workflow: checkout, setup Flutter, `flutter build web --base-href /designsystemet-flutter/` in widgetbook/, deploy build/web/ to gh-pages branch in .github/workflows/deploy-widgetbook.yml
 - [ ] T060 [US4] Configure GitHub repository Pages settings to serve from gh-pages branch (document manual step in README)
-- [ ] T061 [US4] Test deployment by pushing to main and verifying site is live at https://stigvaage.github.io/komponentbibliotek-flutter/
+- [ ] T061 [US4] Test deployment by pushing to main and verifying site is live at https://stigvaage.github.io/designsystemet-flutter/
 
 **Checkpoint**: Site auto-deploys on push to main.
 
@@ -156,7 +156,7 @@
 - [ ] T063 Verify deep-linking: copy URL of a specific component, open in new tab, verify it navigates directly to that component
 - [ ] T064 Add library name, version, and GitHub repo link to the Widgetbook app header/footer in widgetbook/lib/main.dart
 - [ ] T065 Update root README.md to add link to the live documentation site
-- [ ] T066 Run `flutter build web --base-href /komponentbibliotek-flutter/` in widgetbook/ and verify build succeeds with no errors
+- [ ] T066 Run `flutter build web --base-href /designsystemet-flutter/` in widgetbook/ and verify build succeeds with no errors
 
 ---
 

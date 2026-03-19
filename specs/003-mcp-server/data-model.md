@@ -13,7 +13,7 @@ Represents a Flutter widget in the library.
 |-------|------|-------------|
 | name | string | Widget class name (e.g., "DsButton") |
 | category | string | Grouping: "form", "navigation", "layout", "content", "interactive", "typography" |
-| importPath | string | Dart import statement (e.g., "package:komponentbibliotek_flutter/components.dart") |
+| importPath | string | Dart import statement (e.g., "package:designsystemet_flutter/components.dart") |
 | sourcePath | string | Relative path to source file (e.g., "lib/src/components/button/ds_button.dart") |
 | properties | Property[] | Constructor parameters (see below) |
 | description | string | Extracted from documentation or dartdoc comment |

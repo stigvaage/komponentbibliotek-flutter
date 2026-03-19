@@ -53,7 +53,7 @@ This matches how the library's scoping system works and gives users the exact sa
 3. `flutter build web` in `widgetbook/` directory
 4. Deploy `widgetbook/build/web/` to GitHub Pages
 
-The site URL will be `https://stigvaage.github.io/komponentbibliotek-flutter/`.
+The site URL will be `https://stigvaage.github.io/designsystemet-flutter/`.
 
 **Alternatives considered**:
 - Vercel/Netlify → free tier available but adds external dependency

@@ -27,7 +27,7 @@
 
 **⚠️ CRITICAL**: These tasks must be completed atomically (single commit) so GitHub Actions registers the new workflow cleanly.
 
-- [x] T001 [P] Create new deploy workflow at .github/workflows/deploy-pages.yml per contracts/deploy-workflow.md — include triggers (push to main, workflow_dispatch), permissions (contents:read, pages:write, id-token:write), concurrency (group: pages, cancel-in-progress: true), build job (checkout, Flutter SDK via subosito/flutter-action@v2 with channel: stable, Node.js 20 via actions/setup-node@v4 with npm cache, flutter pub get in root and widgetbook/, flutter build web --release --no-tree-shake-icons --base-href /komponentbibliotek-flutter-poc/widgetbook/ in widgetbook/, verify widgetbook/build/web/index.html exists, npm ci in site/, npm run build in site/, cp -r widgetbook/build/web to site/.vitepress/dist/widgetbook, upload-pages-artifact@v3 from site/.vitepress/dist), and deploy job (deploy-pages@v4 with github-pages environment)
+- [x] T001 [P] Create new deploy workflow at .github/workflows/deploy-pages.yml per contracts/deploy-workflow.md — include triggers (push to main, workflow_dispatch), permissions (contents:read, pages:write, id-token:write), concurrency (group: pages, cancel-in-progress: true), build job (checkout, Flutter SDK via subosito/flutter-action@v2 with channel: stable, Node.js 20 via actions/setup-node@v4 with npm cache, flutter pub get in root and widgetbook/, flutter build web --release --no-tree-shake-icons --base-href /designsystemet-flutter-poc/widgetbook/ in widgetbook/, verify widgetbook/build/web/index.html exists, npm ci in site/, npm run build in site/, cp -r widgetbook/build/web to site/.vitepress/dist/widgetbook, upload-pages-artifact@v3 from site/.vitepress/dist), and deploy job (deploy-pages@v4 with github-pages environment)
 - [x] T002 [P] Delete corrupted workflow file .github/workflows/deploy-docs.yml (FR-008: bypass registry corruption)
 - [x] T003 [P] Delete diagnostic workflow file .github/workflows/test.yml (FR-009: remove temporary files)
 
@@ -74,8 +74,8 @@
 
 ### Verification for User Story 3
 
-- [x] T009 [US3] Visit https://stigvaage.github.io/komponentbibliotek-flutter-poc/ — verify docs site loads with navigation, search, and all page sections (intro, kom-i-gang, komponenter, monstre, god-praksis)
-- [x] T010 [US3] Click "Widgetbook" link in docs navigation (or visit https://stigvaage.github.io/komponentbibliotek-flutter-poc/widgetbook/) — verify Widgetbook app loads and displays component catalog with theme, color scope, and size scope addons (confirms FR-010)
+- [x] T009 [US3] Visit https://stigvaage.github.io/designsystemet-flutter-poc/ — verify docs site loads with navigation, search, and all page sections (intro, kom-i-gang, komponenter, monstre, god-praksis)
+- [x] T010 [US3] Click "Widgetbook" link in docs navigation (or visit https://stigvaage.github.io/designsystemet-flutter-poc/widgetbook/) — verify Widgetbook app loads and displays component catalog with theme, color scope, and size scope addons (confirms FR-010)
 - [x] T011 [US3] Test deep-links: navigate directly to a component page (e.g., /komponenter/ds-button.html) and a Widgetbook deep-link — verify both resolve without 404 errors
 
 **Checkpoint**: US3 is verified when all pages and Widgetbook load correctly without errors.

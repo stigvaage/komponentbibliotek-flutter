@@ -18,7 +18,7 @@
   Follow-up TODOs: None
 -->
 
-# komponentbibliotek.flutter Constitution
+# designsystemet_flutter Constitution
 
 ## Core Principles
 

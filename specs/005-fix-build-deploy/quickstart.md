@@ -27,8 +27,8 @@ The GitHub Actions deploy workflow (`deploy-docs.yml`) is corrupted in GitHub's 
 1. Push the changes to main (via PR merge)
 2. Check GitHub Actions tab — new workflow should appear as "Deploy to GitHub Pages"
 3. Verify the workflow run completes with a green check
-4. Visit `https://stigvaage.github.io/komponentbibliotek-flutter-poc/` — docs site should load
-5. Visit `https://stigvaage.github.io/komponentbibliotek-flutter-poc/widgetbook/` — Widgetbook should load
+4. Visit `https://stigvaage.github.io/designsystemet-flutter-poc/` — docs site should load
+5. Visit `https://stigvaage.github.io/designsystemet-flutter-poc/widgetbook/` — Widgetbook should load
 6. Click "Run workflow" button in Actions UI — manual trigger should work
 
 ## Build Pipeline Summary

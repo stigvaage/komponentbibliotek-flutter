@@ -1,4 +1,4 @@
-# Quickstart: komponentbibliotek_flutter
+# Quickstart: designsystemet_flutter
 
 **Feature**: 001-designsystemet-flutter-lib
 **Date**: 2026-03-14
@@ -8,7 +8,7 @@
 ```yaml
 # pubspec.yaml
 dependencies:
-  komponentbibliotek_flutter: ^1.0.0
+  designsystemet_flutter: ^1.0.0
 ```
 
 ```bash
@@ -18,7 +18,7 @@ flutter pub get
 ## 2. Wrap your app with DsTheme
 
 ```dart
-import 'package:komponentbibliotek_flutter/komponentbibliotek_flutter.dart';
+import 'package:designsystemet_flutter/designsystemet_flutter.dart';
 import 'package:flutter/widgets.dart';
 
 void main() {
@@ -42,7 +42,7 @@ DsTheme(
 ## 3. Use components
 
 ```dart
-import 'package:komponentbibliotek_flutter/komponentbibliotek_flutter.dart';
+import 'package:designsystemet_flutter/designsystemet_flutter.dart';
 
 class MyPage extends StatelessWidget {
   @override
@@ -112,7 +112,7 @@ DsField(
 npx @digdir/designsystemet tokens create --config designsystemet.config.json
 
 # Step 2: Generate Dart theme
-dart run komponentbibliotek_flutter:generate \
+dart run designsystemet_flutter:generate \
   --tokens-dir ./design-tokens \
   --output lib/generated/
 ```

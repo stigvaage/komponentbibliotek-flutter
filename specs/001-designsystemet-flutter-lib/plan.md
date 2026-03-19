@@ -5,7 +5,7 @@
 
 ## Summary
 
-Build `komponentbibliotek_flutter`, a Flutter component library that faithfully implements the Norwegian Designsystemet (designsystemet.no). The library provides a complete token-driven theme infrastructure (colors, typography, sizes, shadows, border-radii), 40 accessible components across 4 priority tiers, scoped color/size overrides via InheritedWidgets, and a code generator that converts W3C JSON tokens from the Designsystemet CLI into typed Dart theme classes. All components are built without Material/Cupertino visual dependencies and meet WCAG 2.1 AA accessibility standards.
+Build `designsystemet_flutter`, a Flutter component library that faithfully implements the Norwegian Designsystemet (designsystemet.no). The library provides a complete token-driven theme infrastructure (colors, typography, sizes, shadows, border-radii), 40 accessible components across 4 priority tiers, scoped color/size overrides via InheritedWidgets, and a code generator that converts W3C JSON tokens from the Designsystemet CLI into typed Dart theme classes. All components are built without Material/Cupertino visual dependencies and meet WCAG 2.1 AA accessibility standards.
 
 ## Technical Context
 
@@ -54,7 +54,7 @@ specs/001-designsystemet-flutter-lib/
 
 ```text
 lib/
-├── komponentbibliotek_flutter.dart        # Barrel export
+├── designsystemet_flutter.dart        # Barrel export
 ├── src/
 │   ├── theme/
 │   │   ├── ds_theme.dart                  # DsTheme InheritedWidget + ThemeExtension
@@ -128,7 +128,7 @@ lib/
     └── Inter-SemiBold.ttf                 # Weight 600
 
 bin/
-└── generate.dart                          # CLI: dart run komponentbibliotek_flutter:generate
+└── generate.dart                          # CLI: dart run designsystemet_flutter:generate
 
 test/
 ├── theme/

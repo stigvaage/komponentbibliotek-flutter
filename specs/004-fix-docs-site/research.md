@@ -27,7 +27,7 @@ The full URL format is:
 ### Current Bug (3 issues)
 The WidgetbookEmbed Vue component currently constructs:
 ```
-/komponentbibliotek-flutter/widgetbook/?path=Kjernekomponenter%2FDsButton
+/designsystemet-flutter/widgetbook/?path=Kjernekomponenter%2FDsButton
 ```
 
 This is wrong because:
@@ -74,7 +74,7 @@ Comprehensive audit of all 67 markdown files in `site/nb/`:
 - **2 intro pages**: Present and complete.
 - **All index pages**: Properly structured with navigation grids.
 - **Internal links**: All verified to resolve correctly.
-- **Code examples**: All use correct import paths (`package:komponentbibliotek_flutter/components.dart`).
+- **Code examples**: All use correct import paths (`package:designsystemet_flutter/components.dart`).
 
 ### Remaining Work
 - Remove unused `:height` prop from all 40 WidgetbookEmbed usages
@@ -98,7 +98,7 @@ Analysis of recent GitHub Actions runs:
 
 **Pipeline architecture is correct:**
 - VitePress builds docs site
-- Widgetbook builds Flutter web app with `--base-href /komponentbibliotek-flutter/widgetbook/`
+- Widgetbook builds Flutter web app with `--base-href /designsystemet-flutter/widgetbook/`
 - Widgetbook output is copied into VitePress dist at `/widgetbook/`
 - Combined output deployed to GitHub Pages via `actions/deploy-pages@v4`
 

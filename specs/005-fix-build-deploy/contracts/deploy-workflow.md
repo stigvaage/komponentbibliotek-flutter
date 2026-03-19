@@ -40,7 +40,7 @@
 | Flutter SDK | `subosito/flutter-action@v2` | `channel: stable` |
 | Node.js | `actions/setup-node@v4` | `node-version: 20`, cache npm |
 | Flutter deps | `flutter pub get` | Root + `widgetbook/` |
-| Build Widgetbook | `flutter build web` | `--release --no-tree-shake-icons --base-href /komponentbibliotek-flutter-poc/widgetbook/` |
+| Build Widgetbook | `flutter build web` | `--release --no-tree-shake-icons --base-href /designsystemet-flutter-poc/widgetbook/` |
 | Verify Widgetbook | `test -f` | Assert `widgetbook/build/web/index.html` exists |
 | VitePress deps | `npm ci` | In `site/` |
 | Build docs | `npm run build` | In `site/` |
@@ -57,8 +57,8 @@
 
 | Content | URL |
 |---------|-----|
-| Documentation site | `https://stigvaage.github.io/komponentbibliotek-flutter-poc/` |
-| Widgetbook | `https://stigvaage.github.io/komponentbibliotek-flutter-poc/widgetbook/` |
+| Documentation site | `https://stigvaage.github.io/designsystemet-flutter-poc/` |
+| Widgetbook | `https://stigvaage.github.io/designsystemet-flutter-poc/widgetbook/` |
 
 ### Error Handling
 

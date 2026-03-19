@@ -18,7 +18,7 @@ Research confirmed that documentation content itself is complete and high qualit
 **Target Platform**: GitHub Pages (static web hosting)
 **Project Type**: Documentation site + interactive component catalog
 **Performance Goals**: N/A (static site)
-**Constraints**: Must work with hash-based Flutter web routing; GitHub Pages base path `/komponentbibliotek-flutter/`
+**Constraints**: Must work with hash-based Flutter web routing; GitHub Pages base path `/designsystemet-flutter/`
 **Scale/Scope**: 40 component docs, 1 Vue component fix, 1 workflow file
 
 ## Constitution Check

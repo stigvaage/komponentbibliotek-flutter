@@ -29,7 +29,7 @@ This feature has no application-level data model. It concerns CI/CD pipeline con
   - HTML pages for all doc sections (intro, kom-i-gang, komponenter, monstre, god-praksis)
   - Redirect HTML files for legacy URLs
   - Static assets (CSS, JS, images, search index)
-  - Base path: `/komponentbibliotek-flutter-poc/`
+  - Base path: `/designsystemet-flutter-poc/`
 
 ### Widgetbook Build Output
 
@@ -37,10 +37,10 @@ This feature has no application-level data model. It concerns CI/CD pipeline con
 - **Source**: `widgetbook/` directory (Flutter project)
 - **Output**: `widgetbook/build/web/` directory
 - **Attributes**:
-  - `index.html` with `$FLUTTER_BASE_HREF` resolved to `/komponentbibliotek-flutter-poc/widgetbook/`
+  - `index.html` with `$FLUTTER_BASE_HREF` resolved to `/designsystemet-flutter-poc/widgetbook/`
   - `flutter_bootstrap.js`, `main.dart.js` (compiled Dart)
   - Flutter web engine assets
-  - Base path: `/komponentbibliotek-flutter-poc/widgetbook/`
+  - Base path: `/designsystemet-flutter-poc/widgetbook/`
 
 ### Combined Deployment Artifact
 

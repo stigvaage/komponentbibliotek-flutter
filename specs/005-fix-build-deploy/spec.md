@@ -87,7 +87,7 @@ As a developer evaluating or using the component library, I can visit the publis
 
 - The GitHub Pages deployment source is configured to use GitHub Actions (not a branch-based deployment).
 - The repository has GitHub Pages enabled in its settings.
-- The base path for the Pages site is determined by the repository name (`/komponentbibliotek-flutter-poc/`).
+- The base path for the Pages site is determined by the repository name (`/designsystemet-flutter-poc/`).
 - The existing VitePress configuration and Widgetbook code are correct and build successfully when given the right commands — the issue is isolated to the workflow file corruption and pipeline configuration.
 - The Flutter SDK version used in CI (stable channel) is compatible with the project's `sdk: ^3.3.0` constraint.
 - Renaming the workflow file (e.g., from `deploy-docs.yml` to `deploy-pages.yml`) is sufficient to bypass GitHub's corrupted internal workflow registry.

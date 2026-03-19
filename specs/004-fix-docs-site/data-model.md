@@ -48,7 +48,7 @@ Each component documentation page maps to a Widgetbook deep-link path.
 ### URL Structure
 
 ```
-https://stigvaage.github.io/komponentbibliotek-flutter/
+https://stigvaage.github.io/designsystemet-flutter/
 ├── (VitePress docs root)
 ├── komponenter/ds-button.html      → Documentation page
 ├── widgetbook/                     → Flutter web app

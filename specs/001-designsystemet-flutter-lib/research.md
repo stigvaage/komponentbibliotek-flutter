@@ -277,9 +277,9 @@ design-tokens/
 **Rationale**: FR-033 requires tree-shaking. Each component file must only import theme infrastructure and utils, never other components. The barrel export re-exports everything, but individual imports work too.
 
 **Entry points**:
-- `package:komponentbibliotek_flutter/theme.dart` — theme only
-- `package:komponentbibliotek_flutter/components.dart` — all components
-- `package:komponentbibliotek_flutter/komponentbibliotek_flutter.dart` — everything
+- `package:designsystemet_flutter/theme.dart` — theme only
+- `package:designsystemet_flutter/components.dart` — all components
+- `package:designsystemet_flutter/designsystemet_flutter.dart` — everything
 
 **Alternatives considered**:
 - Single entry point only → rejected (importing everything defeats tree-shaking when only a few components are needed)
