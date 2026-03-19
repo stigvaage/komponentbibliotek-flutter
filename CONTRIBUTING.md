@@ -21,7 +21,7 @@ Takk for at du vil bidra til designsystemet_flutter! Denne guiden forklarer hvor
 ```bash
 # Klon prosjektet
 git clone https://github.com/stigvaage/designsystemet-flutter.git
-cd komponentbibliotek.flutter
+cd designsystemet-flutter
 
 # Installer avhengigheter
 flutter pub get

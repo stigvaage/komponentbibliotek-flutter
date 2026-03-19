@@ -35,8 +35,8 @@ npm start
 
 ```bash
 cd mcp-server
-docker build -t komponentbibliotek-mcp .
-docker run -i komponentbibliotek-mcp
+docker build -t designsystemet-flutter-mcp .
+docker run -i designsystemet-flutter-mcp
 ```
 
 The Docker image includes bundled data — no repo checkout needed at runtime.
@@ -48,11 +48,11 @@ Add to your Claude Code MCP configuration (`.mcp.json` or settings):
 ```json
 {
   "mcpServers": {
-    "komponentbibliotek": {
+    "designsystemet-flutter": {
       "command": "node",
-      "args": ["/path/to/komponentbibliotek.flutter/mcp-server/dist/index.js"],
+      "args": ["/path/to/designsystemet-flutter/mcp-server/dist/index.js"],
       "env": {
-        "REPO_ROOT": "/path/to/komponentbibliotek.flutter"
+        "REPO_ROOT": "/path/to/designsystemet-flutter"
       }
     }
   }
@@ -64,9 +64,9 @@ Or with npx (after npm publish):
 ```json
 {
   "mcpServers": {
-    "komponentbibliotek": {
+    "designsystemet-flutter": {
       "command": "npx",
-      "args": ["@komponentbibliotek/mcp-server"]
+      "args": ["@stigvaage/designsystemet-flutter-mcp"]
     }
   }
 }

@@ -17,7 +17,7 @@
 
 **Purpose**: Initialize the mcp-server project with dependencies and basic structure
 
-- [x] T001 Create mcp-server/ directory with package.json (name: @komponentbibliotek/mcp-server, type: module) and tsconfig.json (target: ES2022, module: Node16, outDir: dist) in mcp-server/
+- [x] T001 Create mcp-server/ directory with package.json (name: @stigvaage/designsystemet-flutter-mcp, type: module) and tsconfig.json (target: ES2022, module: Node16, outDir: dist) in mcp-server/
 - [x] T002 Install production dependencies: @modelcontextprotocol/sdk, zod, minisearch in mcp-server/
 - [x] T003 Install dev dependencies: typescript, vitest, @types/node in mcp-server/
 - [x] T004 [P] Create utility modules: src/utils/paths.ts (resolveRepoRoot, resolveLibPath, resolveDocsPath using REPO_ROOT env var with fallback to `../../`) and src/utils/format.ts (formatPropertyTable, formatCodeBlock, formatComponentSummary helpers) in mcp-server/
@@ -33,7 +33,7 @@
 - [x] T005 Create src/parsers/dart-parser.ts in mcp-server/ — implement two-pass regex parser: Pass 1 extracts constructor parameters via `/const\s+\w+\(\{([^}]+)\}\)/s`, Pass 2 extracts field types via `/final\s+([\w<>,?\s]+\??)\s+(\w+)\s*;/g`, correlate by name, skip `super.key`. Export `parseComponent(filePath): Component` and `parseAllComponents(libDir): Component[]`
 - [x] T006 [P] Create src/parsers/markdown-parser.ts in mcp-server/ — parse documentation markdown files to extract title, sections (by heading), fenced code blocks as examples, and property tables. Export `parseDocPage(filePath): DocumentationPage` and `extractCodeExamples(content): CodeExample[]`
 - [x] T007 [P] Create src/data/categories.json in mcp-server/ — map each of the 43 widgets to a category: form (DsInput, DsTextfield, DsTextarea, DsCheckbox, DsRadio, DsSwitch, DsSelect, DsDropdown, DsField, DsFieldset, DsErrorSummary), navigation (DsButton, DsLink, DsBreadcrumbs, DsPagination, DsSkipLink, DsTabs), layout (DsCard, DsCardHeader, DsCardBlock, DsCardFooter, DsDialog, DsPopover, DsDivider), content (DsAlert, DsBadge, DsTag, DsChip, DsAvatar, DsAvatarStack, DsSpinner, DsSkeleton), interactive (DsToggleGroup, DsTooltip, DsDetails, DsSearch, DsSuggestion, DsList, DsTable), typography (DsHeading, DsParagraph, DsLabel, DsValidationMessage)
-- [x] T008 Create src/index.ts and src/server.ts in mcp-server/ — index.ts: instantiate McpServer({name: "komponentbibliotek", version: from package.json}), connect StdioServerTransport; server.ts: export createServer() that creates McpServer and registers all tools and resources (initially empty, tools added in later phases)
+- [x] T008 Create src/index.ts and src/server.ts in mcp-server/ — index.ts: instantiate McpServer({name: "designsystemet-flutter", version: from package.json}), connect StdioServerTransport; server.ts: export createServer() that creates McpServer and registers all tools and resources (initially empty, tools added in later phases)
 - [x] T009 [P] Write parser tests in mcp-server/tests/parsers/dart-parser.test.ts — test parseComponent against actual lib/src/components/button/ds_button.dart: verify name="DsButton", verify properties include variant (type DsButtonVariant, default DsButtonVariant.primary), onPressed (required, VoidCallback?), child (required, Widget). Test parseComponent against lib/src/components/alert/ds_alert.dart for a second component
 
 **Checkpoint**: Foundation ready — parsers work, server starts on stdio, user story implementation can begin
