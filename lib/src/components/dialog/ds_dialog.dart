@@ -169,13 +169,13 @@ class _DsDialogRoute<T> extends PopupRoute<T> {
   final WidgetBuilder builder;
 
   @override
-  Color? get barrierColor => const Color(0x80000000);
+  Color? get barrierColor => const Color(0x60000000);
 
   @override
   bool get barrierDismissible => true;
 
   @override
-  String? get barrierLabel => 'Dismiss';
+  String? get barrierLabel => 'Lukk';
 
   @override
   Duration get transitionDuration => const Duration(milliseconds: 200);
