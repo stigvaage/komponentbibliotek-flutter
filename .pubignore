@@ -1,0 +1,11 @@
+build/
+mcp-server/
+widgetbook/
+site/
+specs/
+.specify/
+.github/
+.mcp.json
+CLAUDE.md
+CONTRIBUTING.md
+SECURITY.md
