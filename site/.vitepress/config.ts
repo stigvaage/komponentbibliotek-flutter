@@ -276,8 +276,8 @@ export default defineConfig({
     ],
 
     footer: {
-      message: 'Utgitt under MIT-lisens.',
-      copyright: 'Basert på Designsystemet fra Digitaliseringsdirektoratet.',
+      message: 'Utgitt under MIT-lisens. Basert på <a href="https://designsystemet.no">Designsystemet</a> fra <a href="https://www.digdir.no">Digitaliseringsdirektoratet</a>.',
+      copyright: 'Utviklet av Stig H. Våge og <a href="https://claude.ai/claude-code">Claude Code</a>',
     },
   },
 })

@@ -33,4 +33,11 @@ features:
   - icon: 🌳
     title: Tree-shakable
     details: Ubrukte komponenter fjernes automatisk fra applikasjonspakken for optimal ytelse.
+  - icon: 🤖
+    title: MCP-server for AI-assistenter
+    details: Innebygd MCP-server lar Claude Code, Cursor og VS Code Copilot slå opp komponenter, migrere fra Material og søke i dokumentasjonen.
 ---
+
+<div style="text-align: center; margin-top: 2rem; padding: 1rem; color: var(--vp-c-text-2); font-size: 14px;">
+  Utviklet av <strong>Stig H. Våge</strong> og <strong><a href="https://claude.ai/claude-code" style="color: var(--vp-c-brand-1);">Claude Code</a></strong> · Basert på <a href="https://designsystemet.no" style="color: var(--vp-c-brand-1);">Designsystemet</a> fra <a href="https://www.digdir.no" style="color: var(--vp-c-brand-1);">Digitaliseringsdirektoratet</a>
+</div>

@@ -12,8 +12,8 @@ Takk for at du vil bidra til komponentbibliotek_flutter! Denne guiden forklarer 
 
 ### Forutsetninger
 
-- Flutter 3.19 eller nyere
-- Dart 3.3 eller nyere
+- Flutter 3.32 eller nyere
+- Dart 3.8 eller nyere
 - Git
 
 ### Oppsett

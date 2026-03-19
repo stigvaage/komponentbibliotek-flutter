@@ -1,7 +1,7 @@
 # komponentbibliotek_flutter
 
-[![Flutter](https://img.shields.io/badge/Flutter-%3E%3D3.19-blue.svg)](https://flutter.dev)
-[![Dart](https://img.shields.io/badge/Dart-%3E%3D3.3-blue.svg)](https://dart.dev)
+[![Flutter](https://img.shields.io/badge/Flutter-%3E%3D3.32-blue.svg)](https://flutter.dev)
+[![Dart](https://img.shields.io/badge/Dart-%3E%3D3.8-blue.svg)](https://dart.dev)
 [![Designsystemet](https://img.shields.io/badge/Designsystemet-designsystemet.no-003087.svg)](https://designsystemet.no)
 [![Lisens: MIT](https://img.shields.io/badge/Lisens-MIT-green.svg)](LICENSE)
 [![WCAG 2.1 AA](https://img.shields.io/badge/WCAG_2.1-AA-brightgreen.svg)](https://www.w3.org/WAI/WCAG21/quickref/)
@@ -342,6 +342,12 @@ Se [mcp-server/README.md](mcp-server/README.md) for full dokumentasjon og Docker
 ## Bidra
 
 Vi ønsker bidrag velkommen! Se [CONTRIBUTING.md](CONTRIBUTING.md) for retningslinjer.
+
+## Utviklet av
+
+Utviklet av **Stig H. Våge** og **[Claude Code](https://claude.ai/claude-code)**.
+
+Basert på [Designsystemet](https://designsystemet.no) fra [Digitaliseringsdirektoratet](https://www.digdir.no).
 
 ## Lisens
 
