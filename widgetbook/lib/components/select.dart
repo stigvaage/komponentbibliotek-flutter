@@ -2,6 +2,34 @@ import 'package:flutter/widgets.dart';
 import 'package:designsystemet_flutter/designsystemet_flutter.dart';
 import 'package:widgetbook/widgetbook.dart';
 
+class _SelectPreview extends StatefulWidget {
+  const _SelectPreview({required this.disabled, required this.error});
+  final bool disabled;
+  final String? error;
+
+  @override
+  State<_SelectPreview> createState() => _SelectPreviewState();
+}
+
+class _SelectPreviewState extends State<_SelectPreview> {
+  int? _selectedIndex;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(16),
+      child: DsSelect(
+        items: const ['Oslo', 'Bergen', 'Trondheim', 'Stavanger'],
+        selectedIndex: _selectedIndex,
+        placeholder: 'Velg by',
+        disabled: widget.disabled,
+        error: widget.error,
+        onChanged: (index) => setState(() => _selectedIndex = index),
+      ),
+    );
+  }
+}
+
 final selectComponent = WidgetbookComponent(
   name: 'DsSelect',
   useCases: [
@@ -16,14 +44,9 @@ final selectComponent = WidgetbookComponent(
           label: 'Feil',
           initialValue: false,
         );
-        return Padding(
-          padding: const EdgeInsets.all(16),
-          child: DsSelect(
-            items: const ['Oslo', 'Bergen', 'Trondheim', 'Stavanger'],
-            placeholder: 'Velg by',
-            disabled: disabled,
-            error: hasError ? 'Velg en by' : null,
-          ),
+        return _SelectPreview(
+          disabled: disabled,
+          error: hasError ? 'Velg en by' : null,
         );
       },
     ),
