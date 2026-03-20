@@ -14,18 +14,14 @@ void main() {
   group('DsField', () {
     testWidgets('renders child input', (tester) async {
       await tester.pumpWidget(
-        wrapWithTheme(
-          const DsField(child: Text('input placeholder')),
-        ),
+        wrapWithTheme(const DsField(child: Text('input placeholder'))),
       );
       expect(find.text('input placeholder'), findsOneWidget);
     });
 
     testWidgets('renders label when provided', (tester) async {
       await tester.pumpWidget(
-        wrapWithTheme(
-          const DsField(label: 'Email', child: Text('input')),
-        ),
+        wrapWithTheme(const DsField(label: 'Email', child: Text('input'))),
       );
       expect(find.text('Email'), findsOneWidget);
     });
@@ -45,10 +41,7 @@ void main() {
     testWidgets('renders validation message when error set', (tester) async {
       await tester.pumpWidget(
         wrapWithTheme(
-          const DsField(
-            error: 'This field is required',
-            child: Text('input'),
-          ),
+          const DsField(error: 'This field is required', child: Text('input')),
         ),
       );
       expect(find.text('This field is required'), findsOneWidget);
@@ -56,16 +49,12 @@ void main() {
 
     testWidgets('no validation message when error is null', (tester) async {
       await tester.pumpWidget(
-        wrapWithTheme(
-          const DsField(child: Text('input')),
-        ),
+        wrapWithTheme(const DsField(child: Text('input'))),
       );
       expect(find.byType(DsValidationMessage), findsNothing);
     });
 
-    testWidgets('DsFieldScope propagates error to descendants', (
-      tester,
-    ) async {
+    testWidgets('DsFieldScope propagates error to descendants', (tester) async {
       String? capturedError;
       await tester.pumpWidget(
         wrapWithTheme(

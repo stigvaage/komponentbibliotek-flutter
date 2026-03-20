@@ -9,11 +9,7 @@ Widget wrapWithOverlay(Widget child) {
     data: DsThemeDigdir.light(),
     child: Directionality(
       textDirection: TextDirection.ltr,
-      child: Overlay(
-        initialEntries: [
-          OverlayEntry(builder: (_) => child),
-        ],
-      ),
+      child: Overlay(initialEntries: [OverlayEntry(builder: (_) => child)]),
     ),
   );
 }
@@ -40,17 +36,11 @@ void main() {
 
     testWidgets('shows tooltip on mouse hover', (tester) async {
       await tester.pumpWidget(
-        wrapWithOverlay(
-          const DsTooltip(message: 'Tip', child: Text('Target')),
-        ),
+        wrapWithOverlay(const DsTooltip(message: 'Tip', child: Text('Target'))),
       );
       // Simulate mouse hover
-      final gesture = await tester.createGesture(
-        kind: PointerDeviceKind.mouse,
-      );
-      await gesture.addPointer(
-        location: tester.getCenter(find.text('Target')),
-      );
+      final gesture = await tester.createGesture(kind: PointerDeviceKind.mouse);
+      await gesture.addPointer(location: tester.getCenter(find.text('Target')));
       await tester.pump();
       expect(find.text('Tip'), findsOneWidget);
 

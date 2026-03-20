@@ -52,8 +52,7 @@ class _DsSkipLinkState extends State<DsSkipLink> {
           child: GestureDetector(
             onTap: widget.onActivate,
             child: Container(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               decoration: BoxDecoration(
                 color: colorScale.baseDefault,
                 borderRadius: BorderRadius.circular(

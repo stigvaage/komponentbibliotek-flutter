@@ -39,9 +39,7 @@ void main() {
 
     testWidgets('has button semantics on each item', (tester) async {
       await tester.pumpWidget(
-        wrapWithTheme(
-          const DsSuggestion(items: ['Oslo', 'Bergen']),
-        ),
+        wrapWithTheme(const DsSuggestion(items: ['Oslo', 'Bergen'])),
       );
       // Each item has Semantics(button: true, label: itemText)
       final semanticsWidgets = tester.widgetList<Semantics>(
@@ -54,9 +52,7 @@ void main() {
 
     testWidgets('each item semantic label matches text', (tester) async {
       await tester.pumpWidget(
-        wrapWithTheme(
-          const DsSuggestion(items: ['Stavanger']),
-        ),
+        wrapWithTheme(const DsSuggestion(items: ['Stavanger'])),
       );
       final semanticsWidget = tester.widget<Semantics>(
         find.byWidgetPredicate(

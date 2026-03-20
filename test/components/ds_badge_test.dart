@@ -16,9 +16,7 @@ void main() {
       tester,
     ) async {
       await tester.pumpWidget(
-        wrapWithTheme(
-          const DsBadge(child: Text('Icon')),
-        ),
+        wrapWithTheme(const DsBadge(child: Text('Icon'))),
       );
       expect(find.text('Icon'), findsOneWidget);
       // No badge count text — no Stack used when count is null
@@ -27,9 +25,7 @@ void main() {
 
     testWidgets('renders count text', (tester) async {
       await tester.pumpWidget(
-        wrapWithTheme(
-          const DsBadge(count: 5, child: Text('Icon')),
-        ),
+        wrapWithTheme(const DsBadge(count: 5, child: Text('Icon'))),
       );
       expect(find.text('5'), findsOneWidget);
     });
@@ -45,9 +41,7 @@ void main() {
 
     testWidgets('has semantic label with count', (tester) async {
       await tester.pumpWidget(
-        wrapWithTheme(
-          const DsBadge(count: 5, child: Text('Icon')),
-        ),
+        wrapWithTheme(const DsBadge(count: 5, child: Text('Icon'))),
       );
       // Verify via Semantics widget properties
       final semanticsWidget = tester.widget<Semantics>(
@@ -60,9 +54,7 @@ void main() {
 
     testWidgets('singular semantic label for count=1', (tester) async {
       await tester.pumpWidget(
-        wrapWithTheme(
-          const DsBadge(count: 1, child: Text('Icon')),
-        ),
+        wrapWithTheme(const DsBadge(count: 1, child: Text('Icon'))),
       );
       final semanticsWidget = tester.widget<Semantics>(
         find.byWidgetPredicate(

@@ -20,9 +20,7 @@ void main() {
     });
 
     testWidgets('non-elevated shows border, no shadow', (tester) async {
-      await tester.pumpWidget(
-        wrapWithTheme(const DsCard(child: Text('Card'))),
-      );
+      await tester.pumpWidget(wrapWithTheme(const DsCard(child: Text('Card'))));
       final container = tester.widget<AnimatedContainer>(
         find.byType(AnimatedContainer),
       );
@@ -69,10 +67,7 @@ void main() {
         wrapWithTheme(const DsCardHeader(child: Text('Header'))),
       );
       final padding = tester.widget<Padding>(find.byType(Padding).first);
-      expect(
-        padding.padding,
-        const EdgeInsets.fromLTRB(16, 16, 16, 8),
-      );
+      expect(padding.padding, const EdgeInsets.fromLTRB(16, 16, 16, 8));
     });
 
     testWidgets('DsCardFooter applies correct padding', (tester) async {
@@ -80,10 +75,7 @@ void main() {
         wrapWithTheme(const DsCardFooter(child: Text('Footer'))),
       );
       final padding = tester.widget<Padding>(find.byType(Padding).first);
-      expect(
-        padding.padding,
-        const EdgeInsets.fromLTRB(16, 8, 16, 16),
-      );
+      expect(padding.padding, const EdgeInsets.fromLTRB(16, 8, 16, 16));
     });
   });
 }

@@ -54,8 +54,7 @@ class DsErrorSummary extends StatelessWidget {
                         child: Focus(
                           onKeyEvent: (node, event) {
                             if (event is KeyDownEvent &&
-                                (event.logicalKey ==
-                                        LogicalKeyboardKey.enter ||
+                                (event.logicalKey == LogicalKeyboardKey.enter ||
                                     event.logicalKey ==
                                         LogicalKeyboardKey.space)) {
                               onErrorTap!(i);

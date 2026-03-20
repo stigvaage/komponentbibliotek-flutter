@@ -14,9 +14,7 @@ void main() {
   group('DsDialog', () {
     testWidgets('renders child content', (tester) async {
       await tester.pumpWidget(
-        wrapWithTheme(
-          const DsDialog(child: Text('Dialog body')),
-        ),
+        wrapWithTheme(const DsDialog(child: Text('Dialog body'))),
       );
       expect(find.text('Dialog body'), findsOneWidget);
     });
@@ -24,10 +22,7 @@ void main() {
     testWidgets('renders title when provided', (tester) async {
       await tester.pumpWidget(
         wrapWithTheme(
-          const DsDialog(
-            title: Text('Dialog title'),
-            child: Text('Body'),
-          ),
+          const DsDialog(title: Text('Dialog title'), child: Text('Body')),
         ),
       );
       expect(find.text('Dialog title'), findsOneWidget);
@@ -50,18 +45,18 @@ void main() {
         ),
       );
       await tester.pumpAndSettle();
-      await tester.tap(find.byWidgetPredicate(
-        (w) => w is Semantics && w.properties.label == 'Lukk dialog',
-      ));
+      await tester.tap(
+        find.byWidgetPredicate(
+          (w) => w is Semantics && w.properties.label == 'Lukk dialog',
+        ),
+      );
       await tester.pumpAndSettle();
       expect(closed, isTrue);
     });
 
     testWidgets('has scopesRoute and namesRoute semantics', (tester) async {
       await tester.pumpWidget(
-        wrapWithTheme(
-          const DsDialog(child: Text('body')),
-        ),
+        wrapWithTheme(const DsDialog(child: Text('body'))),
       );
       // Verify via the Semantics widget properties directly
       final semanticsWidget = tester.widget<Semantics>(
@@ -77,9 +72,7 @@ void main() {
       tester,
     ) async {
       await tester.pumpWidget(
-        wrapWithTheme(
-          DsDialog(onClose: () {}, child: const Text('body')),
-        ),
+        wrapWithTheme(DsDialog(onClose: () {}, child: const Text('body'))),
       );
       expect(
         find.byWidgetPredicate(

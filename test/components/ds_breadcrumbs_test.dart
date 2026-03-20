@@ -25,9 +25,7 @@ void main() {
 
     testWidgets('renders slash separators between items', (tester) async {
       await tester.pumpWidget(
-        wrapWithTheme(
-          const DsBreadcrumbs(items: ['A', 'B', 'C']),
-        ),
+        wrapWithTheme(const DsBreadcrumbs(items: ['A', 'B', 'C'])),
       );
       // 3 items → 2 separators
       expect(find.text('/'), findsNWidgets(2));
@@ -35,9 +33,7 @@ void main() {
 
     testWidgets('last item is not underlined', (tester) async {
       await tester.pumpWidget(
-        wrapWithTheme(
-          const DsBreadcrumbs(items: ['Home', 'Current']),
-        ),
+        wrapWithTheme(const DsBreadcrumbs(items: ['Home', 'Current'])),
       );
       final lastText = tester.widget<Text>(find.text('Current'));
       expect(lastText.style?.decoration, isNot(TextDecoration.underline));
@@ -61,15 +57,11 @@ void main() {
 
     testWidgets('has "Brødsmulenavigasjon" semantics label', (tester) async {
       await tester.pumpWidget(
-        wrapWithTheme(
-          const DsBreadcrumbs(items: ['Home', 'Page']),
-        ),
+        wrapWithTheme(const DsBreadcrumbs(items: ['Home', 'Page'])),
       );
       expect(
         find.byWidgetPredicate(
-          (w) =>
-              w is Semantics &&
-              w.properties.label == 'Brødsmulenavigasjon',
+          (w) => w is Semantics && w.properties.label == 'Brødsmulenavigasjon',
         ),
         findsOneWidget,
       );

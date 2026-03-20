@@ -11,10 +11,7 @@ Widget wrapWithOverlay(Widget child) {
       child: Overlay(
         initialEntries: [
           OverlayEntry(
-            builder: (_) => Align(
-              alignment: Alignment.topLeft,
-              child: child,
-            ),
+            builder: (_) => Align(alignment: Alignment.topLeft, child: child),
           ),
         ],
       ),

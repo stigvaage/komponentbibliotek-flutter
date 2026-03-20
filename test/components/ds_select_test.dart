@@ -8,11 +8,7 @@ Widget wrapWithOverlay(Widget child) {
     data: DsThemeDigdir.light(),
     child: Directionality(
       textDirection: TextDirection.ltr,
-      child: Overlay(
-        initialEntries: [
-          OverlayEntry(builder: (_) => child),
-        ],
-      ),
+      child: Overlay(initialEntries: [OverlayEntry(builder: (_) => child)]),
     ),
   );
 }
@@ -34,10 +30,7 @@ void main() {
     testWidgets('renders selected item text', (tester) async {
       await tester.pumpWidget(
         wrapWithOverlay(
-          const DsSelect(
-            items: ['Apple', 'Banana'],
-            selectedIndex: 1,
-          ),
+          const DsSelect(items: ['Apple', 'Banana'], selectedIndex: 1),
         ),
       );
       expect(find.text('Banana'), findsOneWidget);
@@ -45,12 +38,7 @@ void main() {
 
     testWidgets('disabled renders at reduced opacity', (tester) async {
       await tester.pumpWidget(
-        wrapWithOverlay(
-          const DsSelect(
-            items: ['Apple'],
-            disabled: true,
-          ),
-        ),
+        wrapWithOverlay(const DsSelect(items: ['Apple'], disabled: true)),
       );
       final opacity = tester.widget<Opacity>(find.byType(Opacity));
       final theme = DsThemeDigdir.light();
@@ -73,9 +61,7 @@ void main() {
 
     testWidgets('has button semantics with "Velg" label', (tester) async {
       await tester.pumpWidget(
-        wrapWithOverlay(
-          const DsSelect(items: ['A', 'B']),
-        ),
+        wrapWithOverlay(const DsSelect(items: ['A', 'B'])),
       );
       final semanticsWidget = tester.widget<Semantics>(
         find.byWidgetPredicate(
@@ -87,12 +73,7 @@ void main() {
 
     testWidgets('error state renders with DsSelect', (tester) async {
       await tester.pumpWidget(
-        wrapWithOverlay(
-          const DsSelect(
-            items: ['A'],
-            error: 'Required',
-          ),
-        ),
+        wrapWithOverlay(const DsSelect(items: ['A'], error: 'Required')),
       );
       // DsSelect with error still renders
       expect(find.byType(DsSelect), findsOneWidget);

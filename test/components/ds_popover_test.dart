@@ -8,11 +8,7 @@ Widget wrapWithOverlay(Widget child) {
     data: DsThemeDigdir.light(),
     child: Directionality(
       textDirection: TextDirection.ltr,
-      child: Overlay(
-        initialEntries: [
-          OverlayEntry(builder: (_) => child),
-        ],
-      ),
+      child: Overlay(initialEntries: [OverlayEntry(builder: (_) => child)]),
     ),
   );
 }
@@ -49,10 +45,7 @@ void main() {
     testWidgets('toggles closed on second trigger tap', (tester) async {
       await tester.pumpWidget(
         wrapWithOverlay(
-          const DsPopover(
-            trigger: Text('Toggle'),
-            content: Text('Content'),
-          ),
+          const DsPopover(trigger: Text('Toggle'), content: Text('Content')),
         ),
       );
       await tester.tap(find.text('Toggle'));

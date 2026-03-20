@@ -58,9 +58,9 @@ void main() {
           ),
         ),
       );
-      final positioned = tester.widgetList<Positioned>(
-        find.byType(Positioned),
-      ).toList();
+      final positioned = tester
+          .widgetList<Positioned>(find.byType(Positioned))
+          .toList();
       // Each child is at i * (48 - overlap) = i * 40
       expect(positioned[0].left, 0);
       expect(positioned[1].left, 40);

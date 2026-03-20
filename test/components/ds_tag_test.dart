@@ -22,9 +22,7 @@ void main() {
     testWidgets('has tinted background', (tester) async {
       final theme = DsThemeDigdir.light();
       final colorScale = theme.colorScheme.resolve(DsColor.accent);
-      await tester.pumpWidget(
-        wrapWithTheme(const DsTag(child: Text('Tag'))),
-      );
+      await tester.pumpWidget(wrapWithTheme(const DsTag(child: Text('Tag'))));
       final container = tester.widget<Container>(find.byType(Container));
       final decoration = container.decoration as BoxDecoration;
       expect(decoration.color, colorScale.surfaceTinted);
@@ -33,9 +31,7 @@ void main() {
     testWidgets('has subtle border', (tester) async {
       final theme = DsThemeDigdir.light();
       final colorScale = theme.colorScheme.resolve(DsColor.accent);
-      await tester.pumpWidget(
-        wrapWithTheme(const DsTag(child: Text('Tag'))),
-      );
+      await tester.pumpWidget(wrapWithTheme(const DsTag(child: Text('Tag'))));
       final container = tester.widget<Container>(find.byType(Container));
       final decoration = container.decoration as BoxDecoration;
       final border = decoration.border as Border;

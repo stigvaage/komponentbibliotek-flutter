@@ -13,9 +13,7 @@ Widget wrapWithTheme(Widget child) {
 void main() {
   group('DsLink', () {
     testWidgets('renders text', (tester) async {
-      await tester.pumpWidget(
-        wrapWithTheme(const DsLink(text: 'Read more')),
-      );
+      await tester.pumpWidget(wrapWithTheme(const DsLink(text: 'Read more')));
       expect(find.text('Read more'), findsOneWidget);
     });
 
@@ -29,25 +27,19 @@ void main() {
     });
 
     testWidgets('has link semantics', (tester) async {
-      await tester.pumpWidget(
-        wrapWithTheme(const DsLink(text: 'Link')),
-      );
+      await tester.pumpWidget(wrapWithTheme(const DsLink(text: 'Link')));
       final semantics = tester.getSemantics(find.byType(DsLink));
       expect(semantics.flagsCollection.isLink, isTrue);
     });
 
     testWidgets('has underline by default', (tester) async {
-      await tester.pumpWidget(
-        wrapWithTheme(const DsLink(text: 'Underlined')),
-      );
+      await tester.pumpWidget(wrapWithTheme(const DsLink(text: 'Underlined')));
       final text = tester.widget<Text>(find.byType(Text));
       expect(text.style?.decoration, TextDecoration.underline);
     });
 
     testWidgets('semantic label matches text', (tester) async {
-      await tester.pumpWidget(
-        wrapWithTheme(const DsLink(text: 'My link')),
-      );
+      await tester.pumpWidget(wrapWithTheme(const DsLink(text: 'My link')));
       // Verify via Semantics widget properties (avoids merged label)
       final semanticsWidget = tester.widget<Semantics>(
         find.byWidgetPredicate(

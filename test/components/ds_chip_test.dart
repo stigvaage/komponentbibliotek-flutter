@@ -52,9 +52,12 @@ void main() {
           DsChip(removable: true, onRemove: () {}, child: const Text('Tag')),
         ),
       );
-      expect(find.byWidgetPredicate(
+      expect(
+        find.byWidgetPredicate(
           (w) => w is Semantics && w.properties.label == 'Fjern',
-        ), findsOneWidget);
+        ),
+        findsOneWidget,
+      );
     });
 
     testWidgets('onRemove called when remove icon tapped', (tester) async {
@@ -68,17 +71,17 @@ void main() {
           ),
         ),
       );
-      await tester.tap(find.byWidgetPredicate(
+      await tester.tap(
+        find.byWidgetPredicate(
           (w) => w is Semantics && w.properties.label == 'Fjern',
-        ));
+        ),
+      );
       expect(removed, isTrue);
     });
 
     testWidgets('has button semantics when onTap set', (tester) async {
       await tester.pumpWidget(
-        wrapWithTheme(
-          DsChip(onTap: () {}, child: const Text('Click')),
-        ),
+        wrapWithTheme(DsChip(onTap: () {}, child: const Text('Click'))),
       );
       final semantics = tester.getSemantics(find.byType(DsChip));
       expect(semantics.flagsCollection.isButton, isTrue);

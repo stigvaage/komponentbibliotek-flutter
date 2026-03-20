@@ -13,21 +13,14 @@ Widget wrapWithTheme(Widget child) {
 void main() {
   group('DsDivider', () {
     testWidgets('renders horizontal divider by default', (tester) async {
-      await tester.pumpWidget(
-        wrapWithTheme(const DsDivider()),
-      );
+      await tester.pumpWidget(wrapWithTheme(const DsDivider()));
       expect(find.byType(DsDivider), findsOneWidget);
     });
 
-    testWidgets('renders vertical divider when vertical=true', (
-      tester,
-    ) async {
+    testWidgets('renders vertical divider when vertical=true', (tester) async {
       await tester.pumpWidget(
         wrapWithTheme(
-          const SizedBox(
-            height: 100,
-            child: DsDivider(vertical: true),
-          ),
+          const SizedBox(height: 100, child: DsDivider(vertical: true)),
         ),
       );
       expect(find.byType(DsDivider), findsOneWidget);
@@ -35,11 +28,10 @@ void main() {
 
     testWidgets('uses theme border color', (tester) async {
       final theme = DsThemeDigdir.light();
-      final expectedColor =
-          theme.colorScheme.resolve(DsColor.accent).borderSubtle;
-      await tester.pumpWidget(
-        wrapWithTheme(const DsDivider()),
-      );
+      final expectedColor = theme.colorScheme
+          .resolve(DsColor.accent)
+          .borderSubtle;
+      await tester.pumpWidget(wrapWithTheme(const DsDivider()));
       // DsDivider renders a single Container with color set
       final container = tester.widget<Container>(
         find.descendant(

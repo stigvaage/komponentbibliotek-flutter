@@ -13,30 +13,22 @@ Widget wrapWithTheme(Widget child) {
 void main() {
   group('DsAvatar', () {
     testWidgets('renders initials from single name', (tester) async {
-      await tester.pumpWidget(
-        wrapWithTheme(const DsAvatar(name: 'Stig')),
-      );
+      await tester.pumpWidget(wrapWithTheme(const DsAvatar(name: 'Stig')));
       expect(find.text('S'), findsOneWidget);
     });
 
     testWidgets('renders initials from full name', (tester) async {
-      await tester.pumpWidget(
-        wrapWithTheme(const DsAvatar(name: 'Stig Vage')),
-      );
+      await tester.pumpWidget(wrapWithTheme(const DsAvatar(name: 'Stig Vage')));
       expect(find.text('SV'), findsOneWidget);
     });
 
     testWidgets('renders "?" when name is null', (tester) async {
-      await tester.pumpWidget(
-        wrapWithTheme(const DsAvatar()),
-      );
+      await tester.pumpWidget(wrapWithTheme(const DsAvatar()));
       expect(find.text('?'), findsOneWidget);
     });
 
     testWidgets('has image semantics', (tester) async {
-      await tester.pumpWidget(
-        wrapWithTheme(const DsAvatar(name: 'Test')),
-      );
+      await tester.pumpWidget(wrapWithTheme(const DsAvatar(name: 'Test')));
       final semantics = tester.getSemantics(find.byType(DsAvatar));
       expect(semantics.flagsCollection.isImage, isTrue);
     });
@@ -54,9 +46,7 @@ void main() {
       );
       expect(semanticsWidget.properties.label, 'Kari Nordmann');
 
-      await tester.pumpWidget(
-        wrapWithTheme(const DsAvatar()),
-      );
+      await tester.pumpWidget(wrapWithTheme(const DsAvatar()));
       semanticsWidget = tester.widget<Semantics>(
         find.byWidgetPredicate(
           (w) => w is Semantics && w.properties.label == 'Profilbilde',

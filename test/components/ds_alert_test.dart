@@ -14,9 +14,7 @@ void main() {
   group('DsAlert', () {
     testWidgets('renders child content', (tester) async {
       await tester.pumpWidget(
-        wrapWithTheme(
-          const DsAlert(child: Text('Something happened')),
-        ),
+        wrapWithTheme(const DsAlert(child: Text('Something happened'))),
       );
       expect(find.text('Something happened'), findsOneWidget);
     });
@@ -24,10 +22,7 @@ void main() {
     testWidgets('renders title when provided', (tester) async {
       await tester.pumpWidget(
         wrapWithTheme(
-          const DsAlert(
-            title: Text('Alert title'),
-            child: Text('Body'),
-          ),
+          const DsAlert(title: Text('Alert title'), child: Text('Body')),
         ),
       );
       expect(find.text('Alert title'), findsOneWidget);
@@ -37,9 +32,7 @@ void main() {
     testWidgets('renders severity icon for each severity', (tester) async {
       for (final severity in DsSeverity.values) {
         await tester.pumpWidget(
-          wrapWithTheme(
-            DsAlert(severity: severity, child: const Text('msg')),
-          ),
+          wrapWithTheme(DsAlert(severity: severity, child: const Text('msg'))),
         );
         // Each severity renders an Icon widget
         expect(find.byType(Icon), findsAtLeast(1));
@@ -75,17 +68,17 @@ void main() {
       final closeButton = find.byWidgetPredicate(
         (w) => w is Semantics && w.properties.label == 'Lukk varsel',
       );
-      await tester.tap(find.descendant(
-        of: closeButton,
-        matching: find.byType(GestureDetector),
-      ));
+      await tester.tap(
+        find.descendant(
+          of: closeButton,
+          matching: find.byType(GestureDetector),
+        ),
+      );
       expect(closed, isTrue);
     });
 
     testWidgets('has liveRegion semantics', (tester) async {
-      await tester.pumpWidget(
-        wrapWithTheme(const DsAlert(child: Text('msg'))),
-      );
+      await tester.pumpWidget(wrapWithTheme(const DsAlert(child: Text('msg'))));
       // Verify the Semantics widget properties directly
       final semanticsWidget = tester.widget<Semantics>(
         find.byWidgetPredicate(

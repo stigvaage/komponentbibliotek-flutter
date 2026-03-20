@@ -21,11 +21,7 @@ void main() {
     testWidgets('renders page buttons for totalPages', (tester) async {
       await tester.pumpWidget(
         wrapWithTheme(
-          DsPagination(
-            currentPage: 1,
-            totalPages: 5,
-            onPageChanged: (_) {},
-          ),
+          DsPagination(currentPage: 1, totalPages: 5, onPageChanged: (_) {}),
         ),
       );
       for (var i = 1; i <= 5; i++) {
@@ -36,11 +32,7 @@ void main() {
     testWidgets('current page has selected semantics', (tester) async {
       await tester.pumpWidget(
         wrapWithTheme(
-          DsPagination(
-            currentPage: 2,
-            totalPages: 3,
-            onPageChanged: (_) {},
-          ),
+          DsPagination(currentPage: 2, totalPages: 3, onPageChanged: (_) {}),
         ),
       );
       final semanticsWidget = tester.widget<Semantics>(
@@ -64,9 +56,7 @@ void main() {
       expect(changedTo, 3);
     });
 
-    testWidgets('tapping current page does not fire callback', (
-      tester,
-    ) async {
+    testWidgets('tapping current page does not fire callback', (tester) async {
       var called = false;
       await tester.pumpWidget(
         wrapWithTheme(
@@ -102,11 +92,7 @@ void main() {
     testWidgets('previous button disabled on first page', (tester) async {
       await tester.pumpWidget(
         wrapWithTheme(
-          DsPagination(
-            currentPage: 1,
-            totalPages: 3,
-            onPageChanged: (_) {},
-          ),
+          DsPagination(currentPage: 1, totalPages: 3, onPageChanged: (_) {}),
         ),
       );
       final theme = DsThemeDigdir.light();
@@ -118,11 +104,7 @@ void main() {
     testWidgets('next button disabled on last page', (tester) async {
       await tester.pumpWidget(
         wrapWithTheme(
-          DsPagination(
-            currentPage: 3,
-            totalPages: 3,
-            onPageChanged: (_) {},
-          ),
+          DsPagination(currentPage: 3, totalPages: 3, onPageChanged: (_) {}),
         ),
       );
       final theme = DsThemeDigdir.light();
