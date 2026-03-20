@@ -6,8 +6,8 @@ Denne siden beskriver hva du trenger for å ta i bruk komponentbiblioteket.
 
 | Krav       | Minimum versjon |
 | ---------- | --------------- |
-| Flutter    | 3.19+           |
-| Dart       | 3.3+            |
+| Flutter    | 3.32+           |
+| Dart       | 3.8+            |
 
 Sjekk at du har riktig versjon installert:
 
@@ -31,4 +31,4 @@ Du trenger ingen plattformspesifikk konfigurasjon for å bruke komponentene.
 
 ## Avhengigheter
 
-Biblioteket har ingen eksterne avhengigheter utover Flutter SDK. Alt du trenger er inkludert i pakken.
+Biblioteket har én ekstern avhengighet (`lucide_icons_flutter` for ikoner) i tillegg til Flutter SDK. Alt annet er inkludert i pakken.

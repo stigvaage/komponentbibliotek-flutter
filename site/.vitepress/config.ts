@@ -71,7 +71,24 @@ export default defineConfig({
 
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}favicon.svg` }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:site_name', content: 'Designsystemet Flutter' }],
+    ['meta', { property: 'og:locale', content: 'nb_NO' }],
+    ['meta', { name: 'twitter:card', content: 'summary' }],
   ],
+
+  transformPageData(pageData) {
+    const title = pageData.frontmatter.layout === 'home'
+      ? 'Designsystemet Flutter'
+      : `${pageData.title} | Designsystemet Flutter`
+    const description = pageData.description || 'Flutter-implementasjon av det norske offentlige designsystemet'
+    pageData.frontmatter.head ??= []
+    pageData.frontmatter.head.push(
+      ['meta', { property: 'og:title', content: title }],
+      ['meta', { property: 'og:description', content: description }],
+      ['meta', { property: 'og:url', content: `https://stigvaage.github.io${base}${pageData.relativePath.replace(/\.md$/, '.html')}` }],
+    )
+  },
 
   buildEnd(siteConfig) {
     const outDir = siteConfig.outDir
@@ -88,6 +105,13 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/logo.svg',
+
+    sidebarMenuLabel: 'Meny',
+    returnToTopLabel: 'Tilbake til toppen',
+    darkModeSwitchLabel: 'Utseende',
+    lightModeSwitchTitle: 'Bytt til lyst tema',
+    darkModeSwitchTitle: 'Bytt til mørkt tema',
+    langMenuLabel: 'Språk',
 
     nav: [
       { text: 'Intro', link: '/intro/om-designsystemet' },
